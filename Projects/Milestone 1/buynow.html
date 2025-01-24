@@ -158,6 +158,7 @@
         footer h6 {
             margin: 0;
         }
+
         /* Product Section Styling */
         .product-section {
             display: flex;
@@ -180,10 +181,11 @@
             border-radius: 8px;
             border: 3px solid #ddd;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .product-image img:hover {
-            transform: scale(1.25);
+            transform: scale(1.05);
         }
 
         .product-thumbnails {
@@ -247,39 +249,6 @@
         .product-buttons button:hover {
             background: #d35400;
         }
-
-        /* Additional Styling for Luxurious Feel */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center/cover;
-            z-index: -1;
-            opacity: 0.05;
-        }
-
-        main::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: linear-gradient(135deg, rgba(255, 223, 186, 0.4), rgba(240, 240, 240, 0.4));
-            z-index: -1;
-            filter: blur(10px);
-        }
-
-        a {
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
     </style>
 </head>
 
@@ -288,10 +257,9 @@
         <h1>ALTRUISME</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>&nbsp;
-        <a href="competition.html">Competition</a>&nbsp;
+        <a href="index.html">Home</a>
+        <a href="competition.html">Competition</a>
         <a href="audience.html">Audience</a>
-        <a href="buynow.html">Shop</a>
     </nav>
     <main>
         <h2>Website Summary:</h2>
@@ -299,50 +267,7 @@
             <img src="images/logo.png" alt="Logo">
             <div>
                 <h4>What content will the site contain?</h4>
-                <p>The site will feature luxury clothing collections, brand values, a lookbook, and an e-commerce
-                    section.</p>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <img src="images/blackhoodie.png" alt="Blackhoodie">
-            <div>
-                <h4>Where will you get all of the content for your site (ie. images & text)?</h4>
-                <p>Content will include professionally shot product images, editorial images, and curated brand
-                    descriptions.</p>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <img src="https://via.placeholder.com/150" alt="Fresh">
-            <div>
-                <h4>Why should users care about the focus of the site?</h4>
-                <p>The site embodies exclusivity, style, and quality, appealing to discerning customers who value luxury
-                    fashion.</p>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <img src="https://via.placeholder.com/150" alt="Fashion">
-            <div>
-                <h4>Why should a site be built for this?</h4>
-                <p>To establish an online presence, build the brand image, and make products accessible globally.</p>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <img src="https://via.placeholder.com/150" alt="Innovation">
-            <div>
-                <h4>What would you like users to do at your site?</h4>
-                <p>Browse collections, learn about the brand, and purchase exclusive items.</p>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <img src="https://via.placeholder.com/150" alt="Passion">
-            <div>
-                <h4>What is the goal of the site?</h4>
-                <p>To drive brand awareness, enhance customer engagement, and increase online sales.</p>
+                <p>The site will feature luxury clothing collections, brand values, a lookbook, and an e-commerce section.</p>
             </div>
         </div>
         <section class="product-section">
@@ -363,6 +288,7 @@
                     <button>Add to Cart</button>
                 </div>
             </div>
+        </section>
     </main>
     <footer>
         <h6>Copyright &copy; 2025</h6>
