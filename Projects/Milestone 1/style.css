@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #2c2c2c;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #000, #333);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x400') no-repeat center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #f39c12;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+nav a:hover::after {
+    width: 50%;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+h2, h3 {
+    font-size: 2.8em;
+    color: #333;
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.8em;
+    color: #444;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+    text-indent: 30px;
+}
+
+/* Content Box Styling */
+.content-box {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff, #f7f7f7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.content-box img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 5px solid #000000;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.content-box img:hover {
+    transform: scale(1.05);
+    border-color: #f39c12;
+}
+
+/* Product Section Styling (Shop Page) */
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-image {
+    flex: 1 1 50%;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid #000;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+    border-color: #f39c12;
+}
+
+.product-thumbnails img {
+    width: 60px;
+    margin: 5px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.product-thumbnails img:hover {
+    border-color: #f39c12;
+}
+
+.product-info {
+    flex: 1 1 50%;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.product-info button {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.product-info button:hover {
+    background: #d08710;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 60px;
+}
+
+footer h6 {
+    margin: 0;
+}
