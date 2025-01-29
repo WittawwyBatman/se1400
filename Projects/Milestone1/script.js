@@ -1,76 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // ---- Image Slider (Netflix-Style) ----
-    const track = document.querySelector(".image-track");
-    const prevButton = document.querySelector(".prev-btn");
-    const nextButton = document.querySelector(".next-btn");
-
-    let index = 0;
-    const totalImages = document.querySelectorAll(".image-track img").length;
-    const imagesPerSlide = 3;
-    const maxIndex = Math.ceil(totalImages / imagesPerSlide) - 1;
-    let autoSlide;
-
-    function updateSlider() {
-        const moveAmount = index * -(100 / imagesPerSlide) + "%";
-        track.style.transform = "translateX(" + moveAmount + ")";
-    }
-
-    function nextSlide() {
-        index = (index < maxIndex) ? index + 1 : 0; // Loop back to first
-        updateSlider();
-    }
-
-    function prevSlide() {
-        index = (index > 0) ? index - 1 : maxIndex; // Loop back to last
-        updateSlider();
-    }
-
-    nextButton.addEventListener("click", function () {
-        nextSlide();
-        resetAutoSlide();
-    });
-
-    prevButton.addEventListener("click", function () {
-        prevSlide();
-        resetAutoSlide();
-    });
-
-    function startAutoSlide() {
-        autoSlide = setInterval(nextSlide, 3000);
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlide);
-        startAutoSlide();
-    }
-
-    startAutoSlide();
-
-    // ---- Product Page Functionality ----
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get("item");
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
 
     const products = {
         1: {
-            name: "Wool Coat",
-            price: "$2,640",
-            image: "images/WoolCoat.png",
-            description: "A premium wool blend coat designed for the ultimate luxurious experience.",
-            extraImages: ["images/WoolCoat1.png", "images/WoolCoat2.png"]
+            name: 'Luxury Hoodie',
+            description: 'Crafted from the finest materials, this hoodie embodies luxury and comfort.',
+            price: '$250',
+            image: 'images/BlackShirt.png',
+            extraImages: ['images/BlackShirt1.png', 'images/BlackShirt2.png']
         },
         2: {
-            name: "Designer Pants",
-            price: "$1,200",
-            image: "images/Pants.png",
-            description: "Tailored fit designer pants with high-end fabric for an exclusive look.",
-            extraImages: ["images/Pants1.png", "images/Pants2.png"]
+            name: 'Wool Coat',
+            description: 'Stay warm and stylish with this premium wool coat.',
+            price: '$300',
+            image: 'images/WoolCoat.png',
+            extraImages: ['images/WoolCoat1.png', 'images/WoolCoat2.png']
         },
         3: {
-            name: "Black Noir Luxe Tee",
-            price: "$650",
-            image: "images/BlackShirt.png",
-            description: "A classic yet sophisticated black tee made with premium cotton.",
-            extraImages: ["images/BlackShirt1.png", "images/BlackShirt2.png"]
+            name: 'Designer Pants',
+            description: 'These designer pants offer both comfort and style.',
+            price: '$150',
+            image: 'images/DesignerPants.png',
+            extraImages: ['images/DesignerPants1.png', 'images/DesignerPants2.png']
         }
     };
 
@@ -107,4 +59,26 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(products[id].name + " added to cart!");
     }
+
+    // ---- Slider Functionality ----
+    const sliderImages = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        sliderImages.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : sliderImages.length - 1;
+        showImage(currentIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex < sliderImages.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
+    });
+
+    showImage(currentIndex);
 });
