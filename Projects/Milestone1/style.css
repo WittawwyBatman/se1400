@@ -16,13 +16,15 @@ nav {
 
 nav a {
     color: #fff;
-    padding: 14px 20px;
+    padding: 20px 20px;
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
 }
 
 nav a:hover {
     background-color: #555;
     color: #fff;
+    text-align: center;
 }
 
 /* Style the main content area */
