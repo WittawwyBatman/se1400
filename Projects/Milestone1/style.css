@@ -6,6 +6,8 @@ header::before {
     width: 100px;
     height: auto;
     text-align: center;
+}
+header {
     background: linear-gradient(135deg, #333, #111);
     padding: 2em;
     border-radius: 10px;
