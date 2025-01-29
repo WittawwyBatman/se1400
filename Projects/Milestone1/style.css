@@ -32,6 +32,9 @@ main {
     border-radius: 10px;
     margin: 2em auto;
     max-width: 1200px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 /* Add luxurious styles to text and images */
@@ -59,18 +62,14 @@ img:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Enhance the hero section */
-.hero {
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
     background-color: #111;
     color: #fff;
     padding: 4em 0;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
 }
 
 .hero p {
@@ -166,20 +165,7 @@ nav {
 }
 
 nav a {
-    padding: 20px 30px;
-}
-
-/* Style the main content area */
-main {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Enhance the hero section */
-.hero {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
+    padding: 50px 50px;
 }
 
 /* Style the product items */
