@@ -75,23 +75,26 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     if (productId && products[productId]) {
-        document.getElementById("product-image").src = products[productId].image;
-        document.getElementById("product-title").innerText = products[productId].name;
-        document.getElementById("product-price").innerText = products[productId].price;
-        document.getElementById("product-description").innerText = products[productId].description;
+        const product = products[productId];
+        document.getElementById("main-image").src = product.image;
+        document.getElementById("product-title").innerText = product.name;
+        document.getElementById("product-price").innerText = product.price;
+        document.getElementById("product-description").innerText = product.description;
 
+        // Display extra images if available
         const extraImagesContainer = document.getElementById("extra-images");
-        products[productId].extraImages.forEach(image => {
+        product.extraImages.forEach(image => {
             let imgElement = document.createElement("img");
             imgElement.src = image;
-            imgElement.alt = products[productId].name;
+            imgElement.alt = product.name;
             imgElement.classList.add("thumbnail");
             imgElement.addEventListener("click", () => {
-                document.getElementById("product-image").src = image;
+                document.getElementById("main-image").src = image;
             });
             extraImagesContainer.appendChild(imgElement);
         });
 
+        // Add to Cart functionality
         document.getElementById("add-to-cart").addEventListener("click", function () {
             addToCart(productId);
         });
