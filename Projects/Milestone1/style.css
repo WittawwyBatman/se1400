@@ -239,13 +239,13 @@ footer {
 }
 
 /* Contact Form */
-.contact form {
+.section-box form {
     max-width: 600px;
     margin: 20px auto;
     text-align: left;
 }
 
-.contact input, .contact textarea {
+.section-box input, .section-box textarea {
     width: 100%;
     padding: 10px;
     font-size: 1.2em;
@@ -255,7 +255,7 @@ footer {
 }
 
 /* Submit Button */
-.contact button {
+.section-box button {
     background: #f39c12;
     color: white;
     padding: 15px;
@@ -268,7 +268,7 @@ footer {
     text-align: center;
 }
 
-.contact button:hover {
+.section-box button:hover {
     background: #d35400;
 }
 
