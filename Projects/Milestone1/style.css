@@ -2,7 +2,7 @@
 header::before {
     content: url('ALTRUISME.png');
     display: block;
-    margin: 0 auto 1em;
+    margin: 1px auto 1em;
     width: 100px;
     height: auto;
 }
@@ -128,7 +128,7 @@ img:hover {
 
 /* Style the slider buttons like Netflix */
 .slider button {
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 50%;
     padding: 1em;
@@ -139,7 +139,7 @@ img:hover {
 
 .slider button:hover {
     background-color: rgba(255, 0, 0, 1);
-    transform: scale(1.1);
+    transform: none;
 }
 
 /* Add luxurious font styles */
