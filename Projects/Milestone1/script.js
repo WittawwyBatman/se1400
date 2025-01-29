@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const products = {
         1: {
-            name: "Luxury Jacket",
+            name: "Wool Coat",
             price: "$2,640",
             image: "images/WoolCoat.png",
             description: "A premium wool blend coat designed for the ultimate luxurious experience.",
