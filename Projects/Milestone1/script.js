@@ -7,23 +7,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalImages = document.querySelectorAll(".image-track img").length;
     const imagesPerSlide = 3;
     const maxIndex = Math.ceil(totalImages / imagesPerSlide) - 1;
+    let autoSlide;
 
     function updateSlider() {
         const moveAmount = index * -(100 / imagesPerSlide) + "%";
         track.style.transform = "translateX(" + moveAmount + ")";
     }
 
-    nextButton.addEventListener("click", function () {
+    function nextSlide() {
         if (index < maxIndex) {
             index++;
-            updateSlider();
+        } else {
+            index = 0; // Restart from the first slide
         }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        if (index > 0) {
+            index--;
+        } else {
+            index = maxIndex; // Go to last slide
+        }
+        updateSlider();
+    }
+
+    nextButton.addEventListener("click", function () {
+        nextSlide();
+        resetAutoSlide();
     });
 
     prevButton.addEventListener("click", function () {
-        if (index > 0) {
-            index--;
-            updateSlider();
-        }
+        prevSlide();
+        resetAutoSlide();
     });
+
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 3000); // Change slides every 3 seconds
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        startAutoSlide();
+    }
+
+    // Start auto-sliding when the page loads
+    startAutoSlide();
 });
