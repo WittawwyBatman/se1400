@@ -33,7 +33,7 @@ nav a {
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
     color: #fff;
-    padding: 1em 1.5em;
+    padding: 1em 1em;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     border-radius: 5px;
 }
