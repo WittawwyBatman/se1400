@@ -1,155 +1,180 @@
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+/* Add a logo to the header */
+header::before {
+    content: url('ALTRUISME.png');
+    display: block;
+    margin: 0 auto 1em;
+    width: 100px;
+    height: auto;
 }
 
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
+/* Enhance the navigation bar */
 nav {
-    background-color: #333;
-    overflow: hidden;
+    background-color: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    color: #fff;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-main {
-    padding: 2em;
-}
-
-footer {
-    background-color: #000;
+    background-color: #555;
     color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
+/* Style the main content area */
+main {
+    padding: 3em;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+/* Enhance the hero section */
 .hero {
-    text-align: center;
-    padding: 2em 0;
-    background-color: #eaeaea;
+    background-color: #111;
+    color: #fff;
+    padding: 4em 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero h2 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
-.product-list,
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
+/* Style the product items */
 .product-item,
 .product {
-    flex: 1 1 30%;
-    box-sizing: border-box;
-    padding: 1em;
-    text-align: center;
-    background-color: #fff;
-    margin: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-item:hover,
 .product:hover {
     transform: scale(1.05);
-}
-
-.product-item img,
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .product-item h2,
 .product h3 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
+    font-size: 1.8em;
+    color: #111;
 }
 
 .product-item p,
 .product p {
     font-size: 1.2em;
-    color: #666;
+    color: #555;
 }
 
+/* Style the add-to-cart button */
 .add-to-cart {
-    background-color: #000;
+    background-color: #111;
     color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    padding: 0.7em 1.5em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .add-to-cart:hover {
-    background-color: #444;
+    background-color: #333;
+    transform: scale(1.05);
 }
 
+/* Enhance the slider */
 .slider {
-    position: relative;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-}
-
-.slider img {
-    width: 100%;
-    display: none;
-}
-
-.slider img:first-child {
-    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .slider button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
     padding: 1em;
-    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.slider #prev {
-    left: 0;
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* Add luxurious font styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #000;
+    color: #fff;
 }
 
-.slider #next {
-    right: 0;
+/* Style the header */
+header {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding: 2em;
+    border-bottom: 1px solid #444;
+}
+
+/* Enhance the navigation bar */
+nav {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+nav a {
+    padding: 20px 30px;
+}
+
+/* Style the main content area */
+main {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Enhance the hero section */
+.hero {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+}
+
+/* Style the product items */
+.product-item h2,
+.product h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+
+.product-item p,
+.product p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+}
+
+/* Style the add-to-cart button */
+.add-to-cart {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    padding: 1em 2em;
+}
+
+/* Enhance the footer */
+footer {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    padding: 2em;
+    border-top: 1px solid #444;
 }
