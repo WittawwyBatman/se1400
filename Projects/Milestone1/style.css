@@ -242,9 +242,10 @@ main {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-.product-page img {
+.product-image {
     max-width: 100%;
     border-radius: 10px;
+    justify-content: left;
 }
 
 .product-description {
