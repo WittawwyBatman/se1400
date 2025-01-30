@@ -76,36 +76,80 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderContainer.scrollLeft = scrollLeft - walk;
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const products = document.querySelectorAll(".product");
-        const modal = document.getElementById("product-modal");
-        const modalImage = document.getElementById("modal-image");
-        const modalTitle = document.getElementById("modal-title");
-        const modalDescription = document.getElementById("modal-description");
-        const closeButton = document.getElementById("close-modal");
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
     
-        products.forEach(product => {
-            product.addEventListener("click", () => {
-                const imageSrc = product.querySelector("img").src;
-                const title = product.getAttribute("data-title");
-                const description = product.getAttribute("data-description");
-                
-                modalImage.src = imageSrc;
-                modalTitle.textContent = title;
-                modalDescription.textContent = description;
-                modal.style.display = "flex";
-            });
-        });
-    
-        closeButton.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-        
-        // Close modal if clicking outside content
-        window.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
+        const products = {
+            1: {
+                title: "Deep Noir Tee",
+                price: "$250",
+                image: "images/BlackShirt.png",
+                description: "A premium black tee crafted from high-quality materials for a timeless luxury look."
+            },
+            2: {
+                title: "Scottish Wool Coat",
+                price: "$1,260",
+                image: "images/WoolCoat.png",
+                description: "A sophisticated wool coat made from the finest Scottish wool."
+            },
+            3: {
+                title: "Designer Pants",
+                price: "$750",
+                image: "images/Pants.png",
+                description: "Elegant designer pants with a modern fit and premium craftsmanship."
+            },
+            4: {
+                title: "Grey Luxe Hoodie",
+                price: "$550",
+                image: "images/Hoodie.png",
+                description: "A soft, stylish grey hoodie perfect for layering and comfort."
+            },
+            5: {
+                title: "Long Sleeve",
+                price: "$450",
+                image: "images/LongSleeve.png",
+                description: "A versatile long sleeve made from breathable, high-end fabric."
+            },
+            6: {
+                title: "White Long Sleeve",
+                price: "$450",
+                image: "images/WhiteSleeve.png",
+                description: "A crisp white long sleeve that pairs well with any outfit."
             }
+        };
+    
+        if (products[productId]) {
+            document.getElementById("product-title").textContent = products[productId].title;
+            document.getElementById("product-price").textContent = products[productId].price;
+            document.getElementById("product-image").src = products[productId].image;
+            document.getElementById("product-description").textContent = products[productId].description;
+        } else {
+            document.querySelector(".product-details").innerHTML = "<p>Product not found.</p>";
+        }
+    });    
+   
+    // Cart functionality (if needed)
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function () {
+            const productElement = this.closest(".product");
+            const productId = productElement.getAttribute("data-id");
+            const productTitle = productElement.getAttribute("data-title");
+            const productPrice = productElement.getAttribute("data-price");
+            const productImage = productElement.getAttribute("data-image");
+
+            const cartItem = {
+                id: productId,
+                title: productTitle,
+                price: productPrice,
+                image: productImage
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(cartItem);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(`${productTitle} has been added to your cart!`);
         });
     });
     
