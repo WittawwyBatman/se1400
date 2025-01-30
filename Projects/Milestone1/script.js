@@ -125,4 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(`${productTitle} has been added to your cart!`);
         });
     });
+    function toggleMenu() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('show');
+    }
 });
