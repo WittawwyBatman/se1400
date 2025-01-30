@@ -126,13 +126,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    /* Hamburger Menu Logic */
-    function toggleMenu() {
-        const mobileNav = document.querySelector('.mobile-nav');
-        mobileNav.classList.toggle('show');
+        /* Open when someone clicks on the span element */
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
     }
-
-    if (document.querySelector('.hamburger-menu')) {
-        document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+    
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
     }
 });
