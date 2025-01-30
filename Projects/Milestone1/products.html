@@ -28,7 +28,7 @@
             <div class="product-info">
                 <h2 id="product-title"></h2>
                 <p id="product-price"></p>
-                <p id="product-description"></p>
+                <p id="product-description">Experience the ultimate in luxury and craftsmanship with this exclusive piece from Altruisme.</p>
                 <button id="add-to-cart">Add to Cart</button>
             </div>
         </section>
@@ -36,6 +36,26 @@
     <footer>
         <p>&copy; 2025 Altruisme. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get("id");
+            const products = {
+                "1": { name: "Deep Noir Tee", price: "$250", image: "images/BlackShirt.png" },
+                "2": { name: "Scottish Wool Coat", price: "$1,260", image: "images/WoolCoat.png" },
+                "3": { name: "Designer Pants", price: "$750", image: "images/Pants.png" },
+                "4": { name: "Grey Luxe Hoodie", price: "$550", image: "images/Hoodie.png" },
+                "5": { name: "Long Sleeve", price: "$450", image: "images/LongSleeve.png" },
+                "6": { name: "White Long Sleeve", price: "$450", image: "images/WhiteSleeve.png" }
+            };
+
+            if (productId && products[productId]) {
+                document.getElementById("main-image").src = products[productId].image;
+                document.getElementById("product-title").textContent = products[productId].name;
+                document.getElementById("product-price").textContent = products[productId].price;
+            }
+        });
+    </script>
 </body>
 
 </html>
