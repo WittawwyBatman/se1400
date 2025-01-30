@@ -28,31 +28,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (productId && products[productId]) {
         const product = products[productId];
-        document.getElementById("main-image").src = product.image;
-        document.getElementById("product-title").innerText = product.name;
-        document.getElementById("product-price").innerText = product.price;
-        document.getElementById("product-description").innerText = product.description;
-
-        // Display extra images if available
+        const mainImage = document.getElementById("main-image");
+        const title = document.getElementById("product-title");
+        const price = document.getElementById("product-price");
+        const description = document.getElementById("product-description");
         const extraImagesContainer = document.getElementById("extra-images");
+        const addToCartButton = document.getElementById("add-to-cart");
+
+        // Set product details
+        mainImage.src = product.image;
+        title.innerText = product.name;
+        price.innerText = product.price;
+        description.innerText = product.description;
+
+        // Display extra images
         product.extraImages.forEach(image => {
             let imgElement = document.createElement("img");
             imgElement.src = image;
             imgElement.alt = product.name;
             imgElement.classList.add("thumbnail");
+
             imgElement.addEventListener("click", () => {
-                document.getElementById("main-image").src = image;
+                // Smooth image fade transition
+                mainImage.style.opacity = "0";
+                setTimeout(() => {
+                    mainImage.src = image;
+                    mainImage.style.opacity = "1";
+                }, 300);
             });
+
             extraImagesContainer.appendChild(imgElement);
         });
 
         // Add to Cart functionality
-        document.getElementById("add-to-cart").addEventListener("click", function () {
-            addToCart(productId);
-        });
+        addToCartButton.addEventListener("click", () => addToCart(productId));
     }
 
-    // ---- Add to Cart Functionality ----
     function addToCart(id) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         cart.push(products[id]);
@@ -60,37 +71,52 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(products[id].name + " added to cart!");
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const track = document.querySelector(".slider-track");
-        const images = document.querySelectorAll(".slider img");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-    
-        let currentIndex = 0;
-        const totalImages = images.length;
-    
-        function updateSlider() {
-            const offset = -currentIndex * 100 + "%";
-            track.style.transform = `translateX(${offset})`;
+    // ---- Enhanced Slider ----
+    const track = document.querySelector(".slider-track");
+    const images = document.querySelectorAll(".slider img");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    function updateSlider() {
+        track.style.transition = "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
         }
-    
-        nextButton.addEventListener("click", () => {
-            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
-            updateSlider();
-        });
-    
-        prevButton.addEventListener("click", () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
-            updateSlider();
-        });
-    
-        // Auto-slide every 4 seconds
-        setInterval(() => {
+        updateSlider();
+    });
+
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalImages - 1;
+        }
+        updateSlider();
+    });
+
+    // Auto-slide every 4 seconds
+    let autoSlide = setInterval(() => {
+        currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    }, 4000);
+
+    // Pause auto-slide on hover
+    document.querySelector(".slider").addEventListener("mouseenter", () => clearInterval(autoSlide));
+    document.querySelector(".slider").addEventListener("mouseleave", () => {
+        autoSlide = setInterval(() => {
             currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
             updateSlider();
         }, 4000);
-    
-        updateSlider();
     });
-    
+
+    updateSlider();
 });
