@@ -22,55 +22,43 @@
         <section class="shop">
             <h2>Our Collection</h2>
             <div class="product-grid">
-                <article class="product">
-                    <a href="product.html?id=1" target="_blank">
-                        <img src="images/BlackShirt.png" alt="Luxury Hoodie" class="product-link" data-id="1">
-                    </a>
+                <article class="product" data-id="1" data-title="Deep Noir Tee" data-price="$250" data-image="images/BlackShirt.png">
+                    <img src="images/BlackShirt.png" alt="Luxury Hoodie" class="product-link">
                     <h3>Deep Noir Tee</h3>
                     <p>$250</p>
                     <button class="add-to-cart" data-id="1">Add to Cart</button>
                 </article>
 
-                <article class="product">
-                    <a href="product.html?id=2" target="_blank">
-                        <img src="images/WoolCoat.png" alt="Wool Coat" class="product-link" data-id="2">
-                    </a>
+                <article class="product" data-id="2" data-title="Scottish Wool Coat" data-price="$1,260" data-image="images/WoolCoat.png">
+                    <img src="images/WoolCoat.png" alt="Wool Coat" class="product-link">
                     <h3>Scottish Wool Coat</h3>
                     <p>$1,260</p>
                     <button class="add-to-cart" data-id="2">Add to Cart</button>
                 </article>
 
-                <article class="product">
-                    <a href="product.html?id=3" target="_blank">
-                        <img src="images/Pants.png" alt="Designer Pants" class="product-link" data-id="3">
-                    </a>
+                <article class="product" data-id="3" data-title="Designer Pants" data-price="$750" data-image="images/Pants.png">
+                    <img src="images/Pants.png" alt="Designer Pants" class="product-link">
                     <h3>Designer Pants</h3>
                     <p>$750</p>
                     <button class="add-to-cart" data-id="3">Add to Cart</button>
                 </article>
 
-                <article class="product">
-                    <a href="product.html?id=4" target="_blank">
-                        <img src="images/Hoodie.png" alt="Grey Hoodie" class="product-link" data-id="4">
-                    </a>
+                <article class="product" data-id="4" data-title="Grey Luxe Hoodie" data-price="$550" data-image="images/Hoodie.png">
+                    <img src="images/Hoodie.png" alt="Grey Hoodie" class="product-link">
                     <h3>Grey Luxe Hoodie</h3>
                     <p>$550</p>
                     <button class="add-to-cart" data-id="4">Add to Cart</button>
                 </article>
 
-                <article class="product">
-                    <a href="product.html?id=5" target="_blank">
-                        <img src="images/LongSleeve.png" alt="Long Sleeve" class="product-link" data-id="5">
-                    </a>
+                <article class="product" data-id="5" data-title="Long Sleeve" data-price="$450" data-image="images/LongSleeve.png">
+                    <img src="images/LongSleeve.png" alt="Long Sleeve" class="product-link">
                     <h3>Long Sleeve</h3>
                     <p>$450</p>
                     <button class="add-to-cart" data-id="5">Add to Cart</button>
                 </article>
 
-                <article class="product">
-                    <a href="product.html?id=6" target="_blank">
-                        <img src="images/WhiteSleeve.png" alt="White Long Sleeve" class="product-link" data-id="6">
-                    </a>
+                <article class="product" data-id="6" data-title="White Long Sleeve" data-price="$450" data-image="images/WhiteSleeve.png">
+                    <img src="images/WhiteSleeve.png" alt="White Long Sleeve" class="product-link">
                     <h3>White Long Sleeve</h3>
                     <p>$450</p>
                     <button class="add-to-cart" data-id="6">Add to Cart</button>
@@ -78,6 +66,17 @@
             </div>
         </section>
     </main>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="Product Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-price"></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Altruisme. All rights reserved.</p>
         <section class="contact-info">
