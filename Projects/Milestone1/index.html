@@ -11,19 +11,23 @@
 
 <body>
     <header>
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <div class="overlay-content">
-                        <a href="about.html">About</a>
-                        <a href="shop.html">Shop</a>
-                        <a href="index.html">Home</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="#">Profile</a>
-                        <a href="#">Settings</a>
-                    </div>
-                </div>
+        <div class="header-container">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
             <h1>ALTRUISME</h1>
-                <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776</span>
+        </div>
+    
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+        
         <nav>
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -31,6 +35,14 @@
             <a href="about.html">About</a>
         </nav>
     </header>
+    
+    <style>
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
     
     <script>
         function openNav() {
