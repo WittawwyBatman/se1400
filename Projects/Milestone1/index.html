@@ -16,30 +16,77 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
+        <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <main>
-        <section class="hero">
-            <h2>Discover Luxury</h2>
-            <p>Experience the finest in luxury clothing.</p>
-        </section>
-        <div class="slider">
-            <button id="prev" class="slider-btn prev-btn">‹</button>
-            <div class="slider-track">
-                <img src="images/BlackShirt.png" alt="Black Shirt">
-                <img src="images/WoolCoat.png" alt="Wool Coat">
-                <img src="images/Pants.png" alt="Designer Pants">
-                <img src="images/Hoodie.png" alt="Grey Hoodie">
-                <img src="images/LongSleeve.png" alt="White Long Sleeve With Words">
-                <img src="images/WhiteSleeve.png" alt="White Long Sleeve">
-            </div>
-            <button id="next" class="slider-btn next-btn">›</button>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Luxury Redefined</h2>
+            <p>Timeless elegance, designed for those who appreciate true luxury.</p>
+            <a href="shop.html" class="cta-button">Shop Now</a>
         </div>
-    </main>
+    </section>
+    
+    <!-- Featured Collection -->
+    <section class="featured-collection">
+        <h2>Featured Collection</h2>
+        <div class="product-grid">
+            <article class="product">
+                <a href="product.html?id=1">
+                    <img src="images/BlackShirt.png" alt="Black Shirt">
+                </a>
+                <h3>Luxe Black Tee</h3>
+                <p>250</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </article>
+            
+            <article class="product">
+                <a href="product.html?id=2">
+                    <img src="images/WoolCoat.png" alt="Wool Coat">
+                </a>
+                <h3>Scottish Wool Coat</h3>
+                <p>$1,260</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </article>
+            
+            <article class="product">
+                <a href="product.html?id=3">
+                    <img src="images/Pants.png" alt="Designer Pants">
+                </a>
+                <h3>Designer Pants</h3>
+                <p>$750</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Image Slider -->
+    <div class="slider">
+        <button id="prev">Previous</button>
+        <img src="images/BlackShirt.png" alt="Black Shirt"> 
+        <img src="images/WoolCoat.png" alt="Wool Coat"> 
+        <img src="images/Pants.png" alt="Designer Pants"> 
+        <img src="images/Hoodie.png" alt="Grey Hoodie"> 
+        <img src="images/LongSleeve.png" alt="White Long Sleeve With Words"> 
+        <img src="images/WhiteSleeve.png" alt="White Long Sleeve">
+        <button id="next">Next</button>
+    </div>
+    
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Get Exclusive Access</h2>
+        <p>Join our newsletter for early access to new collections and exclusive discounts.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Altruisme. All rights reserved.</p>
+        <p>&copy; 2023 Altruisme. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
