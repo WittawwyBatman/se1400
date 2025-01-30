@@ -24,12 +24,25 @@
             <div class="bar"></div>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    
+    </div>
+    
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span onclick="openNav()">open</span>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
