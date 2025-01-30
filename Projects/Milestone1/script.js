@@ -76,35 +76,35 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderContainer.scrollLeft = scrollLeft - walk;
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
+        const products = document.querySelectorAll(".product");
         const modal = document.getElementById("product-modal");
         const modalImage = document.getElementById("modal-image");
         const modalTitle = document.getElementById("modal-title");
         const modalDescription = document.getElementById("modal-description");
-        const closeButton = document.querySelector(".close-button");
-        const productImages = document.querySelectorAll(".product img"); // Select only product images
+        const closeButton = document.getElementById("close-modal");
     
-        productImages.forEach(img => {
-            img.addEventListener("click", function () {
-                const product = this.closest(".product"); // Find the nearest product container
-                const title = product.querySelector("h2")?.innerText || "Product";
-                const description = product.querySelector(".product-description")?.innerText || "No description available.";
-                const imgSrc = this.getAttribute("src");
-    
-                modalTitle.innerText = title;
-                modalDescription.innerText = description;
-                modalImage.setAttribute("src", imgSrc);
-                modal.style.display = "flex"; // Show modal
+        products.forEach(product => {
+            product.addEventListener("click", () => {
+                const imageSrc = product.querySelector("img").src;
+                const title = product.getAttribute("data-title");
+                const description = product.getAttribute("data-description");
+                
+                modalImage.src = imageSrc;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                modal.style.display = "flex";
             });
         });
     
-        closeButton.addEventListener("click", function () {
-            modal.style.display = "none"; // Hide modal when close button is clicked
+        closeButton.addEventListener("click", () => {
+            modal.style.display = "none";
         });
-    
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none"; // Hide modal if user clicks outside content
+        
+        // Close modal if clicking outside content
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
             }
         });
     });
