@@ -233,7 +233,7 @@ main {
 }
 
 .product-details {
-    background-color: #fff;
+    background-color: #000000;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -294,7 +294,7 @@ main {
 }
 
 .product-info ul li {
-    background-color: #f4f4f4;
+    background-color: #000000;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
