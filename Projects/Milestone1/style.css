@@ -233,7 +233,7 @@ main {
 }
 
 .product-details {
-    background-color: #000000;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -258,6 +258,20 @@ main {
     font-size: 18px;
 }
 
+.product-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.product-details ul li {
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 .product-details .add-to-cart {
     background-color: #333;
     color: #fff;
@@ -271,6 +285,7 @@ main {
 .product-details .add-to-cart:hover {
     background-color: #555;
 }
+
 
 .content {
     text-align: center;
