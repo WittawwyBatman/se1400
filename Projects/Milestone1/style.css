@@ -283,19 +283,24 @@ main {
 }
 
 .product-info h2 {
-    margin: 10px 0;
-    font-size: 24px;
+    font-size: 3em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #f8f8f8;
 }
 
 .product-info p {
-    margin: 10px 0;
-    font-size: 14px;
+    font-size: 1.1em;
+    color: #ccc;
+    margin-top: 0.5em;
+    line-height: 1.6;
 }
 
 .product-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ccc;
+    margin-top: 0.5em;
+    line-height: 1.6;
 }
 
 .product-info ul li {
