@@ -92,38 +92,79 @@ nav a {
 
 /* Slider */
 .slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 100%;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    position: relative;
-    width: 80%;
-    margin: auto;
+    justify-content: center;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider img {
     width: 100%;
-    display: none;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
-.slider img:first-child {
-    display: block;
-}
-
-.slider button {
+/* Slider Buttons */
+.slider-btn {
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
     border: none;
-    padding: 10px;
+    padding: 1em 1.5em;
     cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transition: all 0.3s;
 }
 
-#prev {
-    left: 0;
+.prev-btn {
+    left: 20px;
 }
 
-#next {
-    right: 0;
+.next-btn {
+    right: 20px;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 2em;
+}
+
+.product {
+    background: #333;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 /* Newsletter Signup */
