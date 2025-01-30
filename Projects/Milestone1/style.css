@@ -184,19 +184,19 @@ main {
 }
 
 
-form {
+.content form {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-label {
+.content label {
     font-size: 1.2em;
     color: #ddd;
     text-align: left;
 }
 
-input, textarea {
+.content input, textarea {
     width: 100%;
     padding: 10px;
     font-size: 1em;
