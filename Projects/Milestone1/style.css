@@ -351,6 +351,46 @@ main {
     cursor: pointer;
 }
 
+/* About Page Styling */
+.about {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.about h2, .about-altruisme h2, .about-founder h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #f8f8f8;
+}
+
+.about p, .about-altruisme p, .about-founder p {
+    font-size: 1.2em;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* About Altruisme Section */
+.about-altruisme {
+    background: #1a1a1a;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+/* About Founder Section */
+.about-founder {
+    background: #222;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+
 /* Footer */
 footer {
     background: #222;
