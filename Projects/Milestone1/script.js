@@ -125,8 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(`${productTitle} has been added to your cart!`);
         });
     });
+
+    /* Hamburger Menu Logic */
     function toggleMenu() {
         const mobileNav = document.querySelector('.mobile-nav');
         mobileNav.classList.toggle('show');
     }
+
+    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
 });
