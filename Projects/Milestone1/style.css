@@ -171,14 +171,6 @@ main {
     }
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
 /* Contact Info Section */
 .contact-info {
     text-align: center;
