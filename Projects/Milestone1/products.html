@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Listing - Altruisme</title>
+    <title>Product Details - Altruisme</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>ALTRUISME - Product Listing</h1>
+        <h1>ALTRUISME - Product Details</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -19,32 +20,21 @@
         <a href="contact.html">Contact</a>
     </nav>
     <main>
-        <section class="product-list">
-            <div class="product-item">
-                <a href="product.html?id=1">
-                    <img src="images/BlackShirt.png" alt="Black Shirt">
-                    <h2>Luxury Hoodie</h2>
-                    <p>$250</p>
-                </a>
+        <section class="product-details">
+            <div class="product-images">
+                <img id="main-image" src="" alt="Product Image">
+                <div id="extra-images" class="extra-images"></div>
             </div>
-            <div class="product-item">
-                <a href="product.html?id=2">
-                    <img src="images/WoolCoat.png" alt="Wool Coat">
-                    <h2>Wool Coat</h2>
-                    <p>$300</p>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="product.html?id=3">
-                    <img src="images/Pants.png" alt="Designer Pants">
-                    <h2>Designer Pants</h2>
-                    <p>$150</p>
-                </a>
+            <div class="product-info">
+                <h2 id="product-title"></h2>
+                <p id="product-price"></p>
+                <p id="product-description"></p>
+                <button id="add-to-cart">Add to Cart</button>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Altruisme. All rights reserved.</p>
+        <p>&copy; 2025 Altruisme. All rights reserved.</p>
     </footer>
 </body>
 
