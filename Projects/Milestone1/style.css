@@ -54,6 +54,66 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-nav a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.mobile-nav a:hover {
+    background-color: #444;
+}
+
+/* Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+/* Toggle menu */
+.show {
+    display: flex !important;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
