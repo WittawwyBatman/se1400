@@ -76,66 +76,32 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderContainer.scrollLeft = scrollLeft - walk;
     });
 
-    /* Product Page Logic */
-    const products = [
-        {
-            id: "1",
-            title: "Deep Noir Tee",
-            price: "$250",
-            description: "A timeless black tee made from the finest cotton for superior comfort and style.",
-            image: "images/BlackShirt.png"
-        },
-        {
-            id: "2",
-            title: "Scottish Wool Coat",
-            price: "$1,260",
-            description: "Handcrafted from premium Scottish wool, this coat is the epitome of luxury and warmth.",
-            image: "images/WoolCoat.png"
-        },
-        {
-            id: "3",
-            title: "Designer Pants",
-            price: "$750",
-            description: "Elegantly tailored designer pants to elevate your wardrobe.",
-            image: "images/Pants.png"
-        },
-        {
-            id: "4",
-            title: "Grey Luxe Hoodie",
-            price: "$550",
-            description: "A soft, high-quality grey hoodie with a minimalistic yet luxurious design.",
-            image: "images/Hoodie.png"
-        },
-        {
-            id: "5",
-            title: "Long Sleeve",
-            price: "$450",
-            description: "A premium long sleeve shirt, perfect for layering or standalone wear.",
-            image: "images/LongSleeve.png"
-        },
-        {
-            id: "6",
-            title: "White Long Sleeve",
-            price: "$450",
-            description: "A crisp white long sleeve that exudes class and simplicity.",
-            image: "images/WhiteSleeve.png"
+    /* Product Modal Logic */
+    const modal = document.getElementById("product-modal");
+    const modalImage = document.getElementById("modal-image");
+    const modalTitle = document.getElementById("modal-title");
+    const modalPrice = document.getElementById("modal-price");
+    const closeButton = document.querySelector(".close-button");
+
+    document.querySelectorAll(".product-link").forEach(item => {
+        item.addEventListener("click", function (event) {
+            const product = event.target.closest(".product");
+            if (product) {
+                modalImage.src = product.getAttribute("data-image");
+                modalTitle.textContent = product.getAttribute("data-title");
+                modalPrice.textContent = product.getAttribute("data-price");
+                modal.style.display = "block";
+            }
+        });
+    });
+
+    closeButton.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
-    ];
-
-    function getProductDetails() {
-        const params = new URLSearchParams(window.location.search);
-        const productId = params.get("id");
-        const product = products.find(p => p.id === productId);
-
-        if (product) {
-            document.getElementById("main-image").src = product.image;
-            document.getElementById("product-title").textContent = product.title;
-            document.getElementById("product-price").textContent = product.price;
-            document.getElementById("product-description").textContent = product.description;
-        }
-    }
-
-    if (window.location.pathname.includes("product.html")) {
-        getProductDetails();
-    }
+    });
 });
