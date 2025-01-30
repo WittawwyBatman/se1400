@@ -243,7 +243,7 @@ main {
 }
 
 .product-image img {
-    max-width: 100%;
+    max-width: 75%;
     border-radius: 10px;
     justify-content: left;
 }
