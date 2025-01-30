@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderContainer.scrollLeft = scrollLeft - walk;
     });
 
-    /* Product Click Handling for Shop Page */
-    document.querySelectorAll(".product-link").forEach(image => {
-        image.addEventListener("click", function () {
+    /* Product Click Event - Redirect to Product Page */
+    document.querySelectorAll(".product-link").forEach(img => {
+        img.addEventListener("click", function () {
             const productElement = this.closest(".product");
             const productId = productElement.getAttribute("data-id");
             window.location.href = `product.html?id=${productId}`;
@@ -85,50 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const productId = params.get("id");
 
     const products = {
-        1: {
-            title: "Deep Noir Tee",
-            price: "$250",
-            image: "images/BlackShirt.png",
-            description: "A premium black tee crafted from high-quality materials for a timeless luxury look."
-        },
-        2: {
-            title: "Scottish Wool Coat",
-            price: "$1,260",
-            image: "images/WoolCoat.png",
-            description: "A sophisticated wool coat made from the finest Scottish wool."
-        },
-        3: {
-            title: "Designer Pants",
-            price: "$750",
-            image: "images/Pants.png",
-            description: "Elegant designer pants with a modern fit and premium craftsmanship."
-        },
-        4: {
-            title: "Grey Luxe Hoodie",
-            price: "$550",
-            image: "images/Hoodie.png",
-            description: "A soft, stylish grey hoodie perfect for layering and comfort."
-        },
-        5: {
-            title: "Long Sleeve",
-            price: "$450",
-            image: "images/LongSleeve.png",
-            description: "A versatile long sleeve made from breathable, high-end fabric."
-        },
-        6: {
-            title: "White Long Sleeve",
-            price: "$450",
-            image: "images/WhiteSleeve.png",
-            description: "A crisp white long sleeve that pairs well with any outfit."
-        }
+        1: { title: "Deep Noir Tee", price: "$250", image: "images/BlackShirt.png", description: "A premium black tee crafted from high-quality materials for a timeless luxury look." },
+        2: { title: "Scottish Wool Coat", price: "$1,260", image: "images/WoolCoat.png", description: "A sophisticated wool coat made from the finest Scottish wool." },
+        3: { title: "Designer Pants", price: "$750", image: "images/Pants.png", description: "Elegant designer pants with a modern fit and premium craftsmanship." },
+        4: { title: "Grey Luxe Hoodie", price: "$550", image: "images/Hoodie.png", description: "A soft, stylish grey hoodie perfect for layering and comfort." },
+        5: { title: "Long Sleeve", price: "$450", image: "images/LongSleeve.png", description: "A versatile long sleeve made from breathable, high-end fabric." },
+        6: { title: "White Long Sleeve", price: "$450", image: "images/WhiteSleeve.png", description: "A crisp white long sleeve that pairs well with any outfit." }
     };
 
-    if (products[productId]) {
+    if (productId && products[productId]) {
         document.getElementById("product-title").textContent = products[productId].title;
         document.getElementById("product-price").textContent = products[productId].price;
         document.getElementById("product-image").src = products[productId].image;
         document.getElementById("product-description").textContent = products[productId].description;
-    } else {
+    } else if (document.querySelector(".product-details")) {
         document.querySelector(".product-details").innerHTML = "<p>Product not found.</p>";
     }
 
