@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     /* Slider Logic */
     const sliderTrack = document.querySelector(".slider-track");
+    const slides = document.querySelectorAll(".slider-track img");
     const prevBtn = document.getElementById("prev");
     const nextBtn = document.getElementById("next");
     let index = 0;
@@ -11,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     nextBtn.addEventListener("click", () => {
-        index = (index + 1) % sliderTrack.children.length;
+        index = (index + 1) % slides.length; // Loops back to first slide
         updateSlider();
     });
 
     prevBtn.addEventListener("click", () => {
-        index = (index - 1 + sliderTrack.children.length) % sliderTrack.children.length;
+        index = (index - 1 + slides.length) % slides.length; // Loops to last slide
         updateSlider();
     });
 
