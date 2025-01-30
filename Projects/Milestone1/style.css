@@ -165,6 +165,15 @@ main {
     transform: scale(1.1);
 }
 
+.content {
+    max-width: 1200px;
+    margin: 3em auto;
+    padding: 3em;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
 /* Hero Section */
 .hero {
     background: url('images/hero-banner.jpg') center/cover no-repeat;
