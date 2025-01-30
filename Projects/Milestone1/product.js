@@ -132,5 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileNav.classList.toggle('show');
     }
 
-    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+    if (document.querySelector('.hamburger-menu')) {
+        document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+    }
 });
