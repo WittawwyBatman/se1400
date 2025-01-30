@@ -21,24 +21,39 @@
 
     <main>
         <section class="product-details">
-            <img id="product-image" src="images/BlackShirt.png" alt="Product Image">
-            <h2 id="product-title">Deep Noir Tee</h2>
-            <p id="product-price">$250</p>
-            <p id="product-description">The Deep Noir Tee is a premium quality t-shirt made from 100% organic cotton. It features a sleek black design that is perfect for any occasion. The fabric is soft, breathable, and durable, ensuring maximum comfort and longevity.</p>
-            <ul id="product-features">
-                <li>100% Organic Cotton</li>
-                <li>Breathable Fabric</li>
-                <li>Durable and Long-lasting</li>
-                <li>Available in Multiple Sizes</li>
-                <li>Machine Washable</li>
-            </ul>
-            <button class="add-to-cart">Add to Cart</button>
+            <div class="product-image">
+                <img id="product-image" src="images/BlackShirt.png" alt="Product Image">
+                <div class="thumbnails">
+                    <img src="images/BlackShirt.png" alt="Thumbnail 1" onclick="changeImage('images/BlackShirt.png')">
+                    <img src="images/WhiteShirt.png" alt="Thumbnail 2" onclick="changeImage('images/WhiteShirt.png')">
+                    <img src="images/GrayShirt.png" alt="Thumbnail 3" onclick="changeImage('images/GrayShirt.png')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h2 id="product-title">Deep Noir Tee</h2>
+                <p id="product-price">$250</p>
+                <p id="product-description">The Deep Noir Tee is a premium quality t-shirt made from 100% organic cotton. It features a sleek black design that is perfect for any occasion. The fabric is soft, breathable, and durable, ensuring maximum comfort and longevity.</p>
+                <ul id="product-features">
+                    <li>100% Organic Cotton</li>
+                    <li>Breathable Fabric</li>
+                    <li>Durable and Long-lasting</li>
+                    <li>Available in Multiple Sizes</li>
+                    <li>Machine Washable</li>
+                </ul>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Altruisme. All rights reserved.</p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('product-image').src = imageSrc;
+        }
+    </script>
 </body>
 
 </html>
