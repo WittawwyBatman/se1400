@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = document.getElementById("prev");
     const nextBtn = document.getElementById("next");
 
-    let index = 0;
+    let index = 1; // Start at first real image
     let isDragging = false;
     let startX, scrollLeft;
 
@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const allSlides = document.querySelectorAll(".slider-track img");
     const slideWidth = slides[0].clientWidth;
 
-    // Adjust initial position
-    sliderTrack.style.transform = `translateX(${-slideWidth}px)`;
+    // Set initial position to first real image
+    sliderTrack.style.transform = `translateX(${-slideWidth * index}px)`;
 
     function updateSlider() {
         sliderTrack.style.transition = "transform 0.5s ease-in-out";
-        sliderTrack.style.transform = `translateX(${-((index + 1) * slideWidth)}px)`;
+        sliderTrack.style.transform = `translateX(${-index * slideWidth}px)`;
     }
 
     nextBtn.addEventListener("click", () => {
-        if (index >= slides.length - 1) return;
+        if (index >= allSlides.length - 1) return;
         index++;
         updateSlider();
     });
@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Loop back after transition ends
     sliderTrack.addEventListener("transitionend", () => {
-        if (index >= slides.length) {
+        if (index >= allSlides.length - 1) {
             sliderTrack.style.transition = "none";
-            index = 0;
-            sliderTrack.style.transform = `translateX(${-slideWidth}px)`;
-        } else if (index < 0) {
+            index = 1;
+            sliderTrack.style.transform = `translateX(${-slideWidth * index}px)`;
+        } else if (index <= 0) {
             sliderTrack.style.transition = "none";
-            index = slides.length - 1;
+            index = allSlides.length - 2;
             sliderTrack.style.transform = `translateX(${-index * slideWidth}px)`;
         }
     });
