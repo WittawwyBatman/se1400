@@ -60,25 +60,37 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(products[id].name + " added to cart!");
     }
 
-    // ---- Slider Functionality ----
-    const sliderImages = document.querySelectorAll('.slider img');
-    let currentIndex = 0;
-
-    function showImage(index) {
-        sliderImages.forEach((img, i) => {
-            img.style.display = i === index ? 'block' : 'none';
+    document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".slider-track");
+        const images = document.querySelectorAll(".slider img");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+    
+        let currentIndex = 0;
+        const totalImages = images.length;
+    
+        function updateSlider() {
+            const offset = -currentIndex * 100 + "%";
+            track.style.transform = `translateX(${offset})`;
+        }
+    
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+            updateSlider();
         });
-    }
-
-    document.getElementById('prev').addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : sliderImages.length - 1;
-        showImage(currentIndex);
+    
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+            updateSlider();
+        });
+    
+        // Auto-slide every 4 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        }, 4000);
+    
+        updateSlider();
     });
-
-    document.getElementById('next').addEventListener('click', () => {
-        currentIndex = (currentIndex < sliderImages.length - 1) ? currentIndex + 1 : 0;
-        showImage(currentIndex);
-    });
-
-    showImage(currentIndex);
+    
 });
