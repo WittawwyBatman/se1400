@@ -168,13 +168,69 @@ main {
 }
 
 .content {
-    max-width: 1200px;
-    margin: 3em auto;
-    padding: 3em;
-    background: #222;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
+    background: #1a1a1a;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin: 3em auto;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #f8f8f8;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    font-size: 1.2em;
+    color: #ddd;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.content input:focus, .content textarea:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.content textarea {
+    height: 150px;
+    resize: none;
+}
+
+.content button {
+    background: black;
+    color: white;
+    padding: 12px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.content button:hover {
+    background: #444;
+    transform: scale(1.05);
 }
 
 /* Hero Section */
