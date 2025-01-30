@@ -167,8 +167,8 @@ button:hover {
 }
 
 .slider button:hover {
-    background: rgba(255, 0, 0, 0.8);
-    border-color: rgba(255, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.8);
+    border-color: rgb(0, 0, 0);
     transform: scale(1.1);
 }
 
