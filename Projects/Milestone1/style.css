@@ -245,7 +245,7 @@ main {
 .product-image img {
     max-width: 100%;
     border-radius: 10px;
-    justify-content: left;
+    justify-content: center;
 }
 
 .product-description {
