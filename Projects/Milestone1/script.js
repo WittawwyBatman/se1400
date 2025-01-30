@@ -76,32 +76,37 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderContainer.scrollLeft = scrollLeft - walk;
     });
 
-    /* Product Modal Logic */
-    const modal = document.getElementById("product-modal");
-    const modalImage = document.getElementById("modal-image");
-    const modalTitle = document.getElementById("modal-title");
-    const modalPrice = document.getElementById("modal-price");
-    const closeButton = document.querySelector(".close-button");
-
-    document.querySelectorAll(".product-link").forEach(item => {
-        item.addEventListener("click", function (event) {
-            const product = event.target.closest(".product");
-            if (product) {
-                modalImage.src = product.getAttribute("data-image");
-                modalTitle.textContent = product.getAttribute("data-title");
-                modalPrice.textContent = product.getAttribute("data-price");
-                modal.style.display = "block";
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("product-modal");
+        const modalImage = document.getElementById("modal-image");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDescription = document.getElementById("modal-description");
+        const closeButton = document.querySelector(".close-button");
+        const productImages = document.querySelectorAll(".product img"); // Select only product images
+    
+        productImages.forEach(img => {
+            img.addEventListener("click", function () {
+                const product = this.closest(".product"); // Find the nearest product container
+                const title = product.querySelector("h2")?.innerText || "Product";
+                const description = product.querySelector(".product-description")?.innerText || "No description available.";
+                const imgSrc = this.getAttribute("src");
+    
+                modalTitle.innerText = title;
+                modalDescription.innerText = description;
+                modalImage.setAttribute("src", imgSrc);
+                modal.style.display = "flex"; // Show modal
+            });
+        });
+    
+        closeButton.addEventListener("click", function () {
+            modal.style.display = "none"; // Hide modal when close button is clicked
+        });
+    
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Hide modal if user clicks outside content
             }
         });
     });
-
-    closeButton.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    
 });
