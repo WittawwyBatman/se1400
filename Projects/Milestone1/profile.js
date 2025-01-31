@@ -1,51 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const formTitle = document.getElementById("form-title");
     const submitBtn = document.getElementById("submit-btn");
     const toggleForm = document.getElementById("toggle-form");
-    const profileContainer = document.getElementById("profile-container");
-
-    function saveUserData(user) {
-        localStorage.setItem("user", JSON.stringify(user));
-    }
-
-    function getUserData() {
-        return JSON.parse(localStorage.getItem("user"));
-    }
-
-    function updateProfilePage(user) {
-        profileContainer.innerHTML = `
-            <h2>Welcome, ${user.username}!</h2>
-            <p>Email: ${user.email}</p>
-            <button class="btn" id="logout-btn">Logout</button>
-            <h3>Profile Settings</h3>
-            <button class="btn" id="theme-toggle">Toggle Dark/Light Mode</button>
-            <h3>Purchase History</h3>
-            <p>No purchases yet.</p>
-            <h3>Manage Payment & Shipping</h3>
-            <input type="text" id="address" placeholder="Shipping Address" value="${user.address || ''}">
-            <input type="text" id="credit-card" placeholder="Credit Card Info" value="${user.card || ''}">
-            <button class="btn" id="save-info">Save Info</button>
-        `;
-        document.getElementById("logout-btn").addEventListener("click", logout);
-        document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
-        document.getElementById("save-info").addEventListener("click", saveProfileInfo);
-    }
-
-    function logout() {
-        localStorage.removeItem("user");
-        location.reload();
-    }
-
-    function toggleTheme() {
-        document.body.classList.toggle("light-mode");
-    }
-
-    function saveProfileInfo() {
-        let user = getUserData();
-        user.address = document.getElementById("address").value;
-        user.card = document.getElementById("credit-card").value;
-        saveUserData(user);
-        alert("Profile updated!");
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    
+    // Check if user is already logged in
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+        window.location.href = "dashboard.html";
     }
 
     toggleForm.addEventListener("click", () => {
@@ -61,29 +25,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     submitBtn.addEventListener("click", () => {
-        const username = document.getElementById("username").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        let user = getUserData();
+        const username = usernameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        if (!username || !email || !password) {
+            alert("Please fill in all fields");
+            return;
+        }
 
         if (formTitle.textContent === "Sign Up") {
-            if (username && email && password) {
-                saveUserData({ username, email, password });
-                updateProfilePage({ username, email });
-            } else {
-                alert("Please fill in all fields");
+            // Sign Up Process
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+            if (users[email]) {
+                alert("Email already in use. Please log in.");
+                return;
             }
+            
+            users[email] = { username, email, password, purchaseHistory: [], settings: { theme: "light" }, paymentInfo: {} };
+            localStorage.setItem("users", JSON.stringify(users));
+            localStorage.setItem("currentUser", JSON.stringify(users[email]));
+            
+            window.location.href = "dashboard.html";
         } else {
-            if (user && email === user.email && password === user.password) {
-                updateProfilePage(user);
-            } else {
+            // Log In Process
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+            if (!users[email] || users[email].password !== password) {
                 alert("Invalid email or password");
+                return;
             }
+            
+            localStorage.setItem("currentUser", JSON.stringify(users[email]));
+            window.location.href = "dashboard.html";
         }
     });
-
-    let existingUser = getUserData();
-    if (existingUser) {
-        updateProfilePage(existingUser);
-    }
 });

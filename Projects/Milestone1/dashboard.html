@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="dashboard.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .toggle-btn {
+            padding: 10px;
+            background: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .logout-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="user-name"></span></h2>
+        
+        <div class="section">
+            <h3>Purchase History</h3>
+            <ul id="purchase-history"></ul>
+        </div>
+        
+        <div class="section">
+            <h3>Dark Mode</h3>
+            <button class="toggle-btn" id="dark-mode-toggle">Enable Dark Mode</button>
+        </div>
+        
+        <div class="section">
+            <h3>Discounts</h3>
+            <p id="discount-info">No discounts available.</p>
+        </div>
+        
+        <div class="section">
+            <h3>Saved Payment & Shipping Info</h3>
+            <p><strong>Card:</strong> <span id="card-info">Not added</span></p>
+            <p><strong>Address:</strong> <span id="address-info">Not added</span></p>
+        </div>
+        
+        <button class="logout-btn" id="logout-btn">Logout</button>
+    </div>
+</body>
+</html>
