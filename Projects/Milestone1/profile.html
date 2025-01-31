@@ -4,9 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="product.js"></script>
+    <script defer src="profile.js"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            background: linear-gradient(135deg, #222, #000);
+            padding: 3em;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .input-group {
+            margin: 1em 0;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8em;
+            background: #333;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            background: #444;
+            border: none;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: #666;
+            transform: scale(1.05);
+        }
+
+        .toggle-form {
+            margin-top: 1em;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .toggle-form:hover {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,82 +104,39 @@
             <a href="about.html">About</a>
         </nav>
     </header>
-    
-    <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
-    
+
+    <div class="profile-container" id="profile-container">
+        <h2 id="form-title">Sign Up</h2>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="btn" id="submit-btn">Create Account</button>
+        <p class="toggle-form" id="toggle-form">Already a member? Log in</p>
+    </div>
+
     <script>
-        function openNav() {
-          document.getElementById("myNav").style.width = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
-    
-    <main>
-        <section id="auth-section">
-            <div id="login-form">
-                <h2>Login</h2>
-                <input type="email" id="login-email" placeholder="Email">
-                <input type="password" id="login-password" placeholder="Password">
-                <button onclick="login()">Login</button>
-                <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
-            </div>
-            
-            <div id="signup-form" style="display:none;">
-                <h2>Sign Up</h2>
-                <input type="text" id="signup-name" placeholder="Full Name">
-                <input type="email" id="signup-email" placeholder="Email">
-                <input type="password" id="signup-password" placeholder="Password">
-                <button onclick="signup()">Sign Up</button>
-                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
-            </div>
-        </section>
-        
-        <section id="profile-section" style="display:none;">
-            <h2>Welcome, <span id="user-name"></span>!</h2>
-            <p>Email: <span id="user-email"></span></p>
-            <h3>Order History</h3>
-            <ul id="order-history">
-                <li>No orders yet.</li>
-            </ul>
-        </section>
-    </main>
-    
-    <script>
-        function toggleForms() {
-            document.getElementById('login-form').style.display = 
-                document.getElementById('login-form').style.display === 'none' ? 'block' : 'none';
-            document.getElementById('signup-form').style.display = 
-                document.getElementById('signup-form').style.display === 'none' ? 'block' : 'none';
-        }
+        const formTitle = document.getElementById("form-title");
+        const submitBtn = document.getElementById("submit-btn");
+        const toggleForm = document.getElementById("toggle-form");
 
-        function login() {
-            const email = document.getElementById('login-email').value;
-            document.getElementById('auth-section').style.display = 'none';
-            document.getElementById('profile-section').style.display = 'block';
-            document.getElementById('user-name').innerText = "Member";
-            document.getElementById('user-email').innerText = email;
-        }
-
-        function signup() {
-            const name = document.getElementById('signup-name').value;
-            const email = document.getElementById('signup-email').value;
-            login(); // Simulate login after signing up
-            document.getElementById('user-name').innerText = name;
-        }
-
-        document.getElementById('logout').addEventListener('click', function() {
-            document.getElementById('auth-section').style.display = 'block';
-            document.getElementById('profile-section').style.display = 'none';
+        toggleForm.addEventListener("click", () => {
+            if (formTitle.textContent === "Sign Up") {
+                formTitle.textContent = "Log In";
+                submitBtn.textContent = "Log In";
+                toggleForm.textContent = "Don't have an account? Sign Up";
+            } else {
+                formTitle.textContent = "Sign Up";
+                submitBtn.textContent = "Create Account";
+                toggleForm.textContent = "Already a member? Log in";
+            }
         });
     </script>
 </body>
+
 </html>
