@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="product.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        </div>
+        <h1>ALTRUISME</h1>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    
+    <style>
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+    
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    
+    <main>
+        <section id="auth-section">
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+            </div>
+            
+            <div id="signup-form" style="display:none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-name" placeholder="Full Name">
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+            </div>
+        </section>
+        
+        <section id="profile-section" style="display:none;">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <p>Email: <span id="user-email"></span></p>
+            <h3>Order History</h3>
+            <ul id="order-history">
+                <li>No orders yet.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <script>
+        function toggleForms() {
+            document.getElementById('login-form').style.display = 
+                document.getElementById('login-form').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('signup-form').style.display = 
+                document.getElementById('signup-form').style.display === 'none' ? 'block' : 'none';
+        }
+
+        function login() {
+            const email = document.getElementById('login-email').value;
+            document.getElementById('auth-section').style.display = 'none';
+            document.getElementById('profile-section').style.display = 'block';
+            document.getElementById('user-name').innerText = "Member";
+            document.getElementById('user-email').innerText = email;
+        }
+
+        function signup() {
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            login(); // Simulate login after signing up
+            document.getElementById('user-name').innerText = name;
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            document.getElementById('auth-section').style.display = 'block';
+            document.getElementById('profile-section').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
