@@ -13,6 +13,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 100vh;
             margin: 0;
             background: #111;
             color: #fff;
@@ -28,6 +29,10 @@
             text-align: center;
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
         }
 
         .header-container {
@@ -36,7 +41,6 @@
             gap: 10px;
         }
 
-
         .profile-container {
             background: linear-gradient(135deg, #222, #000);
             padding: 3em;
@@ -44,7 +48,12 @@
             box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
             text-align: center;
             width: 400px;
-            margin: 100px auto;
+            margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
         }
 
         .input-group {
@@ -89,19 +98,6 @@
         .toggle-form:hover {
             color: #fff;
         }
-
-        footer {
-            width: 100%;
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-
-        .contact-info h2 {
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 
@@ -111,18 +107,6 @@
             <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
         </div>
         <h1>ALTRUISME</h1>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="profile.html">Profile</a>
-                <a href="#">Settings</a>
-            </div>
-        </div>
-
         <nav>
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -130,7 +114,7 @@
             <a href="about.html">About</a>
         </nav>
     </header>
-
+    
     <script>
         function openNav() {
           document.getElementById("myNav").style.width = "100%";
@@ -156,16 +140,6 @@
         <p class="toggle-form" id="toggle-form">Already a member? Log in</p>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Altruisme. All rights reserved.</p>
-        <section class="contact-info">
-            <h2>Our Info</h2>
-            <p>Email: support@altruisme.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
-        </section>
-    </footer>
-
     <script>
         const formTitle = document.getElementById("form-title");
         const submitBtn = document.getElementById("submit-btn");
@@ -183,5 +157,15 @@
             }
         });
     </script>
+
+    <footer>
+        <p>&copy; 2025 Altruisme. All rights reserved.</p>
+        <section class="contact-info">
+            <h2>Our Info</h2>
+            <p>Email: support@altruisme.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
+        </section>
+    </footer>
 </body>
 </html>
