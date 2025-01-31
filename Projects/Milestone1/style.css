@@ -14,6 +14,7 @@ body {
     background: #111;
     color: #fff;
     line-height: 1.8;
+    justify-content: center;
 }
 
 /* Header Styling */
