@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Altruisme</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="product.js"></script>
 </head>
+
 <body>
     <header>
-        <h1>About Us</h1>
+        <div class="header-container">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        </div>
+        <h1>ALTRUISME</h1>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    
+    <style>
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+    
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
     <main>
         <section class="about">
             <h2>Our Story</h2>
