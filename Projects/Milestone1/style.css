@@ -57,6 +57,20 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
 .overlay {
     height: 100%;
     width: 0;
