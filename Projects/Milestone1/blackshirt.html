@@ -4,91 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Deep Noir Tee | Altruisme</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="product.js"></script>
+    <style>
+        /* Luxury Styling */
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #0a0a0a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #000;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        /* Product Page */
+        .product-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .thumbnails img {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .thumbnails img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-details {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .add-to-cart {
+            background: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .add-to-cart:hover {
+            background: #aaa;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #111;
+            color: #aaa;
+            font-size: 0.9em;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Keep the navigation styling */
+        .overlay {
+            height: 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #bbb;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover {
+            color: #fff;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+    </style>
 </head>
 
 <body>
     <header>
         <div class="header-container">
             <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+            <h1>ALTRUISME</h1>
         </div>
-        <h1>Luxe Tee</h1>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="profile.html">Profile</a>
-                <a href="#">Settings</a>
-            </div>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
-    <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
-    
-    <script>
-        function openNav() {
-          document.getElementById("myNav").style.width = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
 
     <main>
-        <section class="product-image">
+        <div class="product-container">
             <div class="product-image">
-                <img id="product-image" src="images/BlackShirt.png" alt="Product Image">
+                <img id="product-image" src="images/BlackShirt.png" alt="Deep Noir Tee">
                 <div class="thumbnails">
                     <img src="images/BlackShirt.png" alt="Thumbnail 1" onclick="changeImage('images/BlackShirt.png')">
                     <img src="images/WhiteShirt.png" alt="Thumbnail 2" onclick="changeImage('images/WhiteShirt.png')">
                     <img src="images/GreyShirt.png" alt="Thumbnail 3" onclick="changeImage('images/GreyShirt.png')">
                 </div>
             </div>
-        </section>
-        <section class="product-details">
-            <div class="product-info">
-                <h2 id="product-title">Deep Noir Tee</h2>
-                <p id="product-description">Crafted with precision and designed for those who value the art of
-                    simplicity, the Altruisme Black Premium Loose-Fit T-shirt is the epitome of elevated casual wear.
-                    Made for individuals who embrace understated luxury, this t-shirt redefines what it means to wear
-                    something minimal yet sophisticated.</p>
-                <h3>Materials</h3>
-                    <p id="product-description">Made from 100% premium, heavyweight cotton, this shirt combines comfort with
-                    durability. The fabric is soft yet resilient, offering an authentic, raw texture that only improves
-                    with time. Designed with a focus on breathability and softness, the t-shirt maintains a smooth matte
-                    finish, ensuring a polished look throughout the day.</p>
-                <h3>Design & Fit</h3>
-                    <p id="product-description">The Altruisme T-shirt embraces a relaxed, loose-fit silhouette that sits effortlessly on the body. Its oversized cut provides freedom of movement, perfect for layering or wearing on its own. A classic crew neckline adds a refined touch, while the slightly dropped shoulders enhance the relaxed, streetwear-inspired aesthetic. There are no flashy designs, logos, or prints—just pure, simple elegance.</p>
-                <h3>Craftsmanship</h3>
-                    <p id="product-description">Each piece is meticulously made to reflect the quality and artistry that Altruisme is known for. From the stitching to the fit, no detail is overlooked. The fabric has been carefully sourced and treated to ensure it’s both sturdy and comfortable, with the perfect balance of structure and softness. The clean edges and seamless construction allow the shirt to be worn on any occasion, whether dressed up with high-end accessories or paired with your favorite skater jeans for a more casual look.</p>
-                <h3>Versatility</h3>
-                    <p id="product-description">True to the Altruisme ethos of effortless luxury, this black t-shirt is a versatile wardrobe essential that transcends trends. Whether you’re lounging in comfort or stepping out for a night on the town, this t-shirt complements any look. Its timeless design works seamlessly with other pieces from the Altruisme collection, creating a wardrobe that speaks to those who value simplicity, sophistication, and a high-end skate-inspired aesthetic.</p>
-                <h3>Fit Guide</h3>
-                    <ul id="product-features">
-                        <li>Loose-fit design for a relaxed, comfortable fit.</li>
-                        <li>Available in sizes XS to XL.</li>
-                        <li>We recommend selecting your usual size for a slightly oversized look or sizing down for a more fitted appearance.</li>
-                    </ul>
-                <h1 id="product-price">$250</h1>
+
+            <div class="product-details">
+                <h2 class="product-title">Deep Noir Tee</h2>
+                <p class="product-description">
+                    Crafted with precision and designed for those who value the art of simplicity, the Altruisme Black Premium Loose-Fit T-shirt is the epitome of elevated casual wear. Made for individuals who embrace understated luxury.
+                </p>
+                <p class="product-description"><strong>Material:</strong> 100% Premium Heavyweight Cotton</p>
+                <p class="product-description"><strong>Fit:</strong> Relaxed, oversized cut for ultimate comfort.</p>
+                <p class="price">$250</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -96,6 +226,14 @@
     </footer>
 
     <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+
         function changeImage(imageSrc) {
             document.getElementById('product-image').src = imageSrc;
         }
