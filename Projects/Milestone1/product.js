@@ -49,26 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    sliderContainer.addEventListener("mousedown", (e) => {
+    sliderTrack.addEventListener("mousedown", (e) => {
         isDragging = true;
-        startX = e.pageX - sliderContainer.offsetLeft;
-        scrollLeft = sliderContainer.scrollLeft;
+        startX = e.pageX - sliderTrack.offsetLeft;
+        scrollLeft = sliderTrack.scrollLeft;
     });
 
-    sliderContainer.addEventListener("mouseleave", () => {
+    sliderTrack.addEventListener("mouseleave", () => {
         isDragging = false;
     });
 
-    sliderContainer.addEventListener("mouseup", () => {
+    sliderTrack.addEventListener("mouseup", () => {
         isDragging = false;
     });
 
-    sliderContainer.addEventListener("mousemove", (e) => {
+    sliderTrack.addEventListener("mousemove", (e) => {
         if (!isDragging) return;
         e.preventDefault();
-        const x = e.pageX - sliderContainer.offsetLeft;
+        const x = e.pageX - sliderTrack.offsetLeft;
         const walk = (x - startX) * 1.5;
-        sliderContainer.scrollLeft = scrollLeft - walk;
+        sliderTrack.scrollLeft = scrollLeft - walk;
     });
 
     /* Product Click Event - Redirect to Product Page */
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Open when someone clicks on the span element */
     function openNav() {
         document.getElementById("myNav").style.width = "100%";
-      }
+    }
       
-      function closeNav() {
+    function closeNav() {
         document.getElementById("myNav").style.width = "0%";
-      }
+    }
 });
