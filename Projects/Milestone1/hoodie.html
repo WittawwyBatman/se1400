@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Luxe Hoodie</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="product.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        </div>
+        <h1>Luxe Hoodie</h1>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="profile.html">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="product-image">
+            <div class="product-image">
+                <img id="product-image" src="images/Hoodie.png" alt="Product Image">
+                <div class="thumbnails">
+                    <img src="images/Hoodie.png" alt="Thumbnail 1" onclick="changeImage('images/BlackHoodie.png')">
+                    <img src="images/WhiteHoodie.png" alt="Thumbnail 2" onclick="changeImage('images/WhiteHoodie.png')">
+                    <img src="images/GreyHoodie.png" alt="Thumbnail 3" onclick="changeImage('images/GreyHoodie.png')">
+                </div>
+            </div>
+        </section>
+        <section class="product-details">
+            <div class="product-info">
+                <h2 id="product-title">Luxe Hoodie</h2>
+                <p id="product-description">Elevate your wardrobe with the Altruisme Luxe Hoodie, a premium heavyweight piece designed for those who appreciate high-end minimalism. This hoodie blends comfort and sophistication, making it an essential staple for any luxury streetwear collection.</p>
+                <h3>Materials</h3>
+                <p>Crafted from 100% organic heavyweight cotton, this hoodie provides unmatched durability and softness. The brushed interior ensures a cozy feel, while the structured fit maintains its shape wear after wear.</p>
+                <h3>Design & Fit</h3>
+                <p>Featuring an oversized, relaxed fit with dropped shoulders, the Luxe Hoodie offers an effortless silhouette. Ribbed cuffs and hem provide structure, while the deep, adjustable hood adds a modern edge.</p>
+                <h3>Craftsmanship</h3>
+                <p>Every detail is meticulously crafted, from the precision stitching to the reinforced seams, ensuring longevity and premium quality. The minimalist design is free of excessive branding, making it a timeless, versatile piece.</p>
+                <h3>Versatility</h3>
+                <p>Perfect for layering or wearing on its own, this hoodie pairs seamlessly with any outfit. Whether you're dressing up for a sleek urban look or keeping it casual, the Luxe Hoodie adapts to every style.</p>
+                <h3>Fit Guide</h3>
+                <ul>
+                    <li>Oversized fit for a modern, relaxed silhouette.</li>
+                    <li>Available in sizes XS to XL.</li>
+                    <li>For a standard fit, consider sizing down.</li>
+                </ul>
+                <h1 id="product-price">$350</h1>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Altruisme. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('product-image').src = imageSrc;
+        }
+    </script>
+</body>
+</html>

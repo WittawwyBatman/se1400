@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="profile.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background: #111;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #222, #000);
+            padding: 1em 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .profile-container {
+            background: linear-gradient(135deg, #222, #000);
+            padding: 3em;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        .input-group {
+            margin: 1em 0;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8em;
+            background: #333;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            background: #444;
+            border: none;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: #666;
+            transform: scale(1.05);
+        }
+
+        .toggle-form {
+            margin-top: 1em;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .toggle-form:hover {
+            color: #fff;
+        }
+
+        footer {
+            width: 100%;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        </div>
+        <h1>AUTRUI</h1>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="profile.html">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <div class="profile-container" id="profile-container">
+        <h2 id="form-title">Sign Up</h2>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="btn" id="submit-btn">Create Account</button>
+        <p class="toggle-form" id="toggle-form">Already a member? Log in</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Autrui. All rights reserved.</p>
+        <section class="contact-info">
+            <h2>Our Info</h2>
+            <p>Email: support@autrui.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
+        </section>
+    </footer>
+
+    <script>
+        const formTitle = document.getElementById("form-title");
+        const submitBtn = document.getElementById("submit-btn");
+        const toggleForm = document.getElementById("toggle-form");
+
+        toggleForm.addEventListener("click", () => {
+            if (formTitle.textContent === "Sign Up") {
+                formTitle.textContent = "Log In";
+                submitBtn.textContent = "Log In";
+                toggleForm.textContent = "Don't have an account? Sign Up";
+            } else {
+                formTitle.textContent = "Sign Up";
+                submitBtn.textContent = "Create Account";
+                toggleForm.textContent = "Already a member? Log in";
+            }
+        });
+    </script>
+</body>
+</html>

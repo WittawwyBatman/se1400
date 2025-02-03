@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AUTRUI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <script defer src="product.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        </div>
+        <h1 class="logo">AUTRUI</h1>
+        
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="profile.html">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop">
+            <h2>Our Collection</h2>
+            <div class="product-grid">
+                <article class="product">
+                    <a href="blackshirt.html">
+                        <img src="images/BlackShirt.png" alt="Luxury Hoodie">
+                    </a>
+                    <h3>Deep Noir Tee</h3>
+                    <p>$250</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product">
+                    <a href="woolcoat.html">
+                        <img src="images/WoolCoat.png" alt="Wool Coat">
+                    </a>
+                    <h3>Scottish Wool Coat</h3>
+                    <p>$1,260</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product">
+                    <a href="pants.html">
+                        <img src="images/Pants.png" alt="Designer Pants">
+                    </a>
+                    <h3>Designer Pants</h3>
+                    <p>$750</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product">
+                    <a href="hoodie.html">
+                        <img src="images/Hoodie.png" alt="Grey Hoodie">
+                    </a>
+                    <h3>Grey Luxe Hoodie</h3>
+                    <p>$550</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product">
+                    <a href="longsleeve.html">
+                        <img src="images/LongSleeve.png" alt="Long Sleeve">
+                    </a>
+                    <h3>Long Sleeve</h3>
+                    <p>$450</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product">
+                    <a href="whitesleeve.html">   
+                        <img src="images/WhiteSleeve.png" alt="White Long Sleeve">
+                    </a>
+                    <h3>White Long Sleeve</h3>
+                    <p>$450</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AUTRUI. All rights reserved.</p>
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: support@autrui.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
+        </section>
+    </footer>
+
+</body>
+</html>
