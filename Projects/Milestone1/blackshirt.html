@@ -7,218 +7,49 @@
     <title>Deep Noir Tee | Altruisme</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="product.js"></script>
-    <style>
-        /* Luxury Styling */
-        body {
-            font-family: 'Playfair Display', serif;
-            background: #0a0a0a;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            background: #000;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        /* Product Page */
-        .product-container {
-            display: flex;
-            max-width: 1200px;
-            margin: 50px auto;
-            gap: 50px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .product-image img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
-        }
-
-        .thumbnails {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .thumbnails img {
-            width: 70px;
-            height: 70px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .thumbnails img:hover {
-            transform: scale(1.1);
-        }
-
-        .product-details {
-            flex: 1;
-            text-align: left;
-            padding: 20px;
-        }
-
-        .product-title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .product-description {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 2em;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .add-to-cart {
-            background: #fff;
-            color: #000;
-            padding: 15px 30px;
-            border: none;
-            font-size: 1.3em;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .add-to-cart:hover {
-            background: #aaa;
-            color: #000;
-            transform: scale(1.05);
-        }
-
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #111;
-            color: #aaa;
-            font-size: 0.9em;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Keep the navigation styling */
-        .overlay {
-            height: 0;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow-x: hidden;
-            transition: 0.5s;
-        }
-
-        .overlay-content {
-            position: relative;
-            top: 25%;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .overlay a {
-            padding: 8px;
-            text-decoration: none;
-            font-size: 36px;
-            color: #bbb;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlay a:hover {
-            color: #fff;
-        }
-
-        .closebtn {
-            position: absolute;
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-
-    </style>
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
-            <h1>ALTRUISME</h1>
+            <span class="menu-icon" onclick="openNav()">&#9776;</span>
+            <h1 class="brand-title">ALTRUISME</h1>
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="profile.html">Profile</a>
+                <a href="#">Settings</a>
+            </div>
         </div>
     </header>
 
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <a href="profile.html">Profile</a>
-            <a href="#">Settings</a>
-        </div>
-    </div>
-
-    <main>
-        <div class="product-container">
-            <div class="product-image">
-                <img id="product-image" src="images/BlackShirt.png" alt="Deep Noir Tee">
-                <div class="thumbnails">
-                    <img src="images/BlackShirt.png" alt="Thumbnail 1" onclick="changeImage('images/BlackShirt.png')">
-                    <img src="images/WhiteShirt.png" alt="Thumbnail 2" onclick="changeImage('images/WhiteShirt.png')">
-                    <img src="images/GreyShirt.png" alt="Thumbnail 3" onclick="changeImage('images/GreyShirt.png')">
-                </div>
+    <main class="product-container">
+        <section class="product-image-section">
+            <img id="product-image" src="images/BlackShirt.png" alt="Deep Noir Tee">
+            <div class="thumbnails">
+                <img src="images/BlackShirt.png" onclick="changeImage('images/BlackShirt.png')">
+                <img src="images/WhiteShirt.png" onclick="changeImage('images/WhiteShirt.png')">
+                <img src="images/GreyShirt.png" onclick="changeImage('images/GreyShirt.png')">
             </div>
+        </section>
 
-            <div class="product-details">
-                <h2 class="product-title">Deep Noir Tee</h2>
-                <p class="product-description">
-                    Crafted with precision and designed for those who value the art of simplicity, the Altruisme Black Premium Loose-Fit T-shirt is the epitome of elevated casual wear. Made for individuals who embrace understated luxury.
-                </p>
-                <p class="product-description"><strong>Material:</strong> 100% Premium Heavyweight Cotton</p>
-                <p class="product-description"><strong>Fit:</strong> Relaxed, oversized cut for ultimate comfort.</p>
-                <p class="price">$250</p>
-                <button class="add-to-cart">Add to Cart</button>
+        <section class="product-details">
+            <h2 class="product-title">Deep Noir Tee</h2>
+            <p class="product-description">
+                Crafted with precision, the Altruisme Black Premium Loose-Fit T-shirt is the epitome of understated luxury.
+            </p>
+            <div class="product-specs">
+                <p><strong>Material:</strong> 100% Premium Heavyweight Cotton</p>
+                <p><strong>Fit:</strong> Relaxed, oversized cut for ultimate comfort.</p>
             </div>
-        </div>
+            <h2 class="product-price">$250</h2>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
     </main>
 
     <footer>
@@ -226,17 +57,9 @@
     </footer>
 
     <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-
-        function changeImage(imageSrc) {
-            document.getElementById('product-image').src = imageSrc;
-        }
+        function openNav() { document.getElementById("myNav").style.width = "100%"; }
+        function closeNav() { document.getElementById("myNav").style.width = "0%"; }
+        function changeImage(imageSrc) { document.getElementById('product-image').src = imageSrc; }
     </script>
 </body>
 
