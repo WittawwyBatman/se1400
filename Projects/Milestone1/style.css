@@ -1116,17 +1116,6 @@ footer a:hover {
     font-weight: 300;
 }
 
-.founder-image {
-    background: var(--accent-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
-}
-
 .founder-image img {
     width: 50%;
     display: block;
