@@ -1131,4 +1131,5 @@ footer a:hover {
     display: block;
     transition: transform 0.3s ease-in-out;
     justify-content: center;
+    align-items: center;
 }
