@@ -1127,8 +1127,8 @@ footer a:hover {
 }
 
 .founder-image img {
-    width: 700px;
-    height: 800px;
+    width: 0.5em;
+    height: 0.5em;
     display: block;
     transition: transform 0.3s ease-in-out;
 }
