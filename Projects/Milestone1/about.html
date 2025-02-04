@@ -1,83 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>About Us | altruisme</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="product.js"></script>
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">altruisme</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-icon">Cart (0)</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>AUTRUI</h1>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="profile.html">Profile</a>
-                <a href="#">Settings</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-about">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Where craftsmanship meets timeless elegance.</p>
+        </div>
+    </section>
+
+    <!-- Brand Introduction -->
+    <section class="brand-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>The Essence of altruisme</h2>
+                <p>Founded on the principles of luxury, sustainability, and precision, <span class="brand-name">altruisme</span> is more than fashion—it's a statement.</p>
+                <p>Each collection is meticulously designed to reflect both modern sophistication and the heritage of high-end craftsmanship.</p>
+            </div>
+            <div class="intro-image">
+                <img src="images/founder.jpg" alt="Founder of altruisme">
             </div>
         </div>
-        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
-    
-    <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
-    
-    <script>
-        function openNav() {
-          document.getElementById("myNav").style.width = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
+    </section>
 
-    <main>
-        <section class="about">
-            <h2>Our Story</h2>
-            <p>Welcome to Autrui. We are dedicated to providing the best luxury clothing. Our products are crafted from the finest materials and designed with elegance and sophistication in mind.</p>
-        </section>
-
-        <section class="about-altruisme">
-            <h2>About Altruisme</h2>
-            <p>Autrui is a luxury clothing brand that embodies sophistication, exclusivity, and modern elegance. Rooted in the philosophy of giving back, our brand merges high-end fashion with a deeper purpose, creating timeless pieces that reflect both style and substance. Each collection is crafted with meticulous attention to detail, ensuring premium quality, refined aesthetics, and a sense of individuality. Altruisme is more than just fashion—it’s a movement towards conscious luxury, where elegance meets purpose.</p>
-        </section>
-
-        <section class="about-founder">
-            <h2>About the Founder</h2>
-            <p>At just 17 years old, the founder of Autrui is a visionary entrepreneur with a passion for business and design. With a sharp mind and a deep appreciation for high fashion, they have seamlessly blended creativity and strategy to build a brand that stands out in the luxury space. Their background in DECA, a prestigious business organization, has given them a competitive edge, allowing them to refine their marketing and branding skills while aiming for national recognition. Beyond fashion, they possess a strong understanding of financial literacy and investments, ensuring that Altruisme is built on a solid foundation for long-term success.</p>
-        </section>
-    </main>
+    <!-- Values Section -->
+    <section class="brand-values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-box">
+                    <h3>Exclusivity</h3>
+                    <p>Limited-run collections designed for those who seek distinction.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Sustainability</h3>
+                    <p>Eco-conscious materials and ethical production define our process.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Craftsmanship</h3>
+                    <p>Every detail, stitch, and fabric is carefully curated for perfection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <footer>
-        <section class="contact-info">
-            <h2>Our Info</h2>
-            <p>Email: support@autrui.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
-        </section>
-        <p>&copy; 2025 Autrui. All rights reserved.</p>
+    <!-- Artistry & Innovation Section -->
+    <section class="artistry">
+        <div class="container">
+            <div class="artistry-text">
+                <h2>Artistry & Innovation</h2>
+                <p>altruisme blends traditional craftsmanship with cutting-edge design. Our artisans work with the finest materials, ensuring every piece tells a story of luxury and precision.</p>
+                <p>From concept to creation, each garment is crafted with meticulous attention to detail, pushing the boundaries of contemporary fashion.</p>
+            </div>
+            <div class="artistry-image">
+                <img src="images/artisan.jpg" alt="Crafting process">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Luxury -->
+    <section class="sustainability">
+        <div class="container">
+            <h2>Sustainable Luxury</h2>
+            <p>We believe luxury should never compromise the future. Our collections are made with responsibly sourced materials and ethical manufacturing practices.</p>
+            <p>altruisme is committed to minimizing waste, reducing carbon footprints, and creating timeless pieces that last for generations.</p>
+            <div class="sustainability-stats">
+                <div class="stat-box">
+                    <h3>85%</h3>
+                    <p>Eco-friendly fabrics</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Ethical production</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Zero</h3>
+                    <p>Mass production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder’s Vision -->
+    <section class="founder">
+        <div class="container">
+            <div class="founder-text">
+                <h2>Our Founder’s Vision</h2>
+                <p>"Luxury is not just about aesthetics; it's about purpose, craftsmanship, and sustainability. altruisme is for those who redefine fashion as an art form, a legacy, and a movement." — <span class="signature">Founder, altruisme</span></p>
+            </div>
+            <div class="founder-image">
+                <img src="images/founder-signature.jpg" alt="Founder signature">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+            </div>
+            <p class="footer-credit">&copy; 2025 altruisme. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
