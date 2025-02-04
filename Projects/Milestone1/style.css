@@ -1131,4 +1131,5 @@ footer a:hover {
     width: 50%;
     display: block;
     transition: transform 0.3s ease-in-out;
+    border: 1px solid
 }
