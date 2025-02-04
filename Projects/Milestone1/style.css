@@ -1164,7 +1164,7 @@ footer a:hover {
     max-width: 400px; /* Controls the image size */
     height: auto;
     border-radius: 12px; /* Soft rounded corners */
-    border: 4px solid #1a1a1a; /* Elegant black border */
+    border: 4px solid var(--accent-color)
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
     transition: transform 0.3s ease-in-out, border-color 0.3s;
 }
