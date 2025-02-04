@@ -1166,5 +1166,6 @@ footer a:hover {
     border-radius: 10px; /* Soft rounded corners for elegance */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     transition: transform 0.3s ease-in-out;
-    border: 10px, var(--accent-color);
+    border: 10px;
+    border-color: var(--accent-color);
 }
