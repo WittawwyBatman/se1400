@@ -1116,16 +1116,58 @@ footer a:hover {
     font-weight: 300;
 }
 
-.founder-image img {
-    width: 50%;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid;
-    justify-content: center;
+.founder {
+    background-color: #f8f8f8; /* Subtle, premium off-white background */
+    padding: 80px 0;
+    text-align: center;
 }
 
-.founder{
-    text-align: center;
-    justify-content: center;
+.container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.founder-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.founder-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.8;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.founder-image {
+    margin-top: 40px;
+    max-width: 100%;
+}
+
+.founder-image img {
+    width: 100%;
+    max-width: 400px; /* Controls the image size */
+    height: auto;
+    border-radius: 10px; /* Soft rounded corners for elegance */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.founder-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
