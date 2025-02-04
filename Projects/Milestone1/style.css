@@ -232,21 +232,6 @@ button:hover, .btn:hover {
     color: var(--primary-color);
 }
 
-.btn {
-    display: inline-block;
-    text-decoration: none; /* Remove underline */
-    padding: 12px 24px;
-    background-color: #c7a661; /* Gold, adjust to match your theme */
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #a88950; /* Slightly darker gold on hover */
-}
-
 /* Hero Section */
 .hero {
     height: 100vh;
