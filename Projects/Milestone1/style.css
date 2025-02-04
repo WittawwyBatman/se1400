@@ -1124,6 +1124,7 @@ footer a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 .founder-image img {
