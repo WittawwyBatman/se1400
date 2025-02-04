@@ -1135,14 +1135,14 @@ footer a:hover {
     font-size: 2.5rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .founder-text p {
     font-size: 1.2rem;
     font-weight: 300;
-    color: #333;
+    color: #ffffff;
     line-height: 1.8;
     font-family: 'Cormorant Garamond', serif;
 }
@@ -1151,7 +1151,7 @@ footer a:hover {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #fffefe;
 }
 
 .founder-image {
