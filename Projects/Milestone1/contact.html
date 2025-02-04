@@ -1,111 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="product.js"></script>
+    <title>Contact Us | altruisme</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">altruisme</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="dashboard.html">Account</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>AUTRUI</h1>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="profile.html">Profile</a>
-                <a href="#">Settings</a>
+    </header>
+
+    <!-- Contact Page Title -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Need assistance? We’re here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="contact-item">
+                    <img src="icons/email.svg" alt="Email Icon">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:support@altruisme.com">support@altruisme.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <img src="icons/phone.svg" alt="Phone Icon">
+                    <h3>Call Us</h3>
+                    <p>+1 (800) 555-0123</p>
+                </div>
+
+                <div class="contact-item">
+                    <img src="icons/location.svg" alt="Location Icon">
+                    <h3>Visit Us</h3>
+                    <p>123 Luxury Ave, New York, NY 10001</p>
+                </div>
+
             </div>
         </div>
-        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
-    
-    <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
-    
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!-- Map Section -->
+    <section class="contact-map">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.847311746623!2d-74.00594128459634!3d40.71277617932814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3169b9bbcd%3A0x4b8fefb58d0c7e8f!2s123%20Luxury%20Ave%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1614116975046!5m2!1sen!2sus" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What is your return policy?</button>
+                <div class="faq-answer">
+                    <p>We accept returns within 30 days of purchase. Items must be in original condition with tags attached.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long does shipping take?</button>
+                <div class="faq-answer">
+                    <p>Standard shipping takes 5-7 business days. Express options are available at checkout.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you ship internationally?</button>
+                <div class="faq-answer">
+                    <p>Yes, we offer worldwide shipping. Rates vary based on location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">altruisme</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-socials">
+                    <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2025 altruisme. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-        function openNav() {
-          document.getElementById("myNav").style.width = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
-        }
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
     </script>
 
-    <main>
-        <section class="content">
-            <h2>Get in Touch</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-        <section class="return-policy">
-            <h2>Return & Refund Policy</h2>
-            <p>We are committed to providing exceptional quality and ensuring customer satisfaction with every purchase. If you are not completely satisfied with your order, our return and refund policy is designed to make the process as smooth as possible.</p>
-            
-            <h3>Returns</h3>
-            <ul>
-                <li><strong>Eligibility:</strong> Items must be returned within 30 days of receipt in their original condition, including all packaging, tags, and accessories. Items that have been worn, altered, washed, or damaged are not eligible for return.</li>
-                <li><strong>Non-returnable items:</strong> Due to hygiene reasons, undergarments, swimwear, and custom-made pieces are not eligible for returns.</li>
-                <li><strong>Proof of Purchase:</strong> A valid receipt or order confirmation is required for all returns.</li>
-            </ul>
-            
-            <h3>Refunds</h3>
-            <ul>
-                <li><strong>Processing Time:</strong> Once your return is received and inspected, we will notify you of the approval or rejection of your refund. If approved, the refund will be processed within 7-10 business days.</li>
-                <li><strong>Shipping Costs:</strong> Original shipping costs are non-refundable. Return shipping costs will be deducted unless the return is due to a fault on our part (e.g., damaged or incorrect items).</li>
-                <li><strong>Exchanges:</strong> We offer exchanges for defective or damaged items. Contact us within 7 days of receiving your order to initiate an exchange.</li>
-            </ul>
-            
-            <h3>How to Return an Item</h3>
-            <ol>
-                <li>Contact our customer service team at <a href="mailto:support@autrui.com">support@autrui.com</a> to initiate a return.</li>
-                <li>We will provide you with a prepaid return label (if applicable) and instructions on how to ship the item back to us.</li>
-                <li>Package the item securely in its original packaging and attach the return label.</li>
-            </ol>
-            
-            <h3>Late or Missing Refunds</h3>
-            <p>If you haven’t received your refund within the estimated timeframe, first check with your bank or credit card company. If you still have not received your refund, please contact us at <a href="mailto:support@altruisme.com">support@altruisme.com</a> for assistance.</p>
-            
-            <p>We take pride in the quality of our luxury products and strive to offer a hassle-free return experience. If you have any questions or concerns, our customer service team is here to assist you.</p>
-        </section>
-    </main>
-    <footer>
-        <section class="contact-info">
-            <h2>Our Info</h2>
-            <p>Email: support@autrui.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Luxury Lane, Fashion City, FC 10001</p>
-        </section>
-        <p>&copy; 2025 Autrui. All rights reserved.</p>
-    </footer>
 </body>
 </html>
