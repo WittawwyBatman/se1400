@@ -118,7 +118,7 @@ p {
 }
 
 .featured-item {
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
