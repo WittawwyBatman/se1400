@@ -39,48 +39,130 @@ p {
     font-size: 1.1rem;
 }
 
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* Navigation Bar */
-nav {
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+.navbar {
+    background: #111;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-nav a {
-    color: var(--secondary-color);
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
+.navbar .logo {
+    font-size: 24px;
     font-weight: bold;
-    padding: 1em 2em;
-    transition: all 0.3s;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #c9a96e;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #c9a96e;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #a8874f;
+}
+
+/* Featured Products */
+.featured {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.featured-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.featured-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.featured-item:hover {
+    transform: scale(1.05);
+}
+
+.featured-img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-nav a:hover {
-    background: #444;
-    transform: scale(1.1);
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c9a96e;
 }
 
-nav ul{
-    list-style: none;
+/* Testimonials */
+.testimonials {
+    background: #222;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
 }
 
-nav ul li{
-    display: inline-block;
-    margin: 0 15px;
+.testimonial-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #333;
+.testimonial-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    font-style: italic;
 }
 
 .overlay {
