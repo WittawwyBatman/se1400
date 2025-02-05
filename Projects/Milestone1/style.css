@@ -1174,3 +1174,32 @@ footer a:hover {
     border-color: #b2925a; /* Luxurious gold accent on hover */
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    padding-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Adjust size */
+    height: 40px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* Makes icons circular */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    opacity: 0.8;
+}
