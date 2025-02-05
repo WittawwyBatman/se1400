@@ -110,42 +110,67 @@ p {
 /* Featured Products */
 .featured {
     padding: 80px 0;
+    background: #f5f5f5; /* Light gray background for contrast */
     text-align: center;
 }
 
 .featured h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 30px;
     text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
 }
 
+/* Grid Layout */
 .featured-grid {
     display: flex;
-    gap: 30px;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* Individual Product Card */
 .featured-item {
-    background: rgb(0, 0, 0);
-    padding: 20px;
+    background: white;
     border-radius: 10px;
-    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
 }
 
 .featured-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Product Images */
 .featured-img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
 }
 
+/* Product Titles */
+.featured-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+/* Price Styling */
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Product Links */
 .featured-item a {
     text-decoration: none;
-    color: var(--accent-color)
+    color: inherit;
 }
 
 .product-price {
@@ -155,29 +180,58 @@ p {
     text-decoration: none;
 }
 
-/* Testimonials */
+/* ===== Testimonials Section ===== */
 .testimonials {
-    background: #222;
-    color: white;
-    padding: 80px 0;
+    background: #f8f8f8;
+    padding: 100px 20px;
     text-align: center;
 }
 
+.testimonials h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testimonials Grid Layout */
 .testimonial-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
 }
 
+/* Individual Testimonial Card */
 .testimonial-item {
-    background: #333;
-    padding: 20px;
+    background: white;
+    padding: 30px;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect */
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Text */
 .testimonial-item p {
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Testimonial Author */
+.testimonial-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
 }
 
 .overlay {
@@ -234,14 +288,15 @@ button:hover, .btn:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    color: white;
 }
 
 .hero .btn {
@@ -1202,4 +1257,158 @@ footer a:hover {
 .social-icons a:hover {
     transform: scale(1.2); /* Slight zoom on hover */
     opacity: 0.8;
+}
+
+/* ===== Luxury Experience Section ===== */
+.luxury-experience {
+    background: url('images/luxury-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+/* Overlay Effect for Better Readability */
+.luxury-experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Content Styling */
+.luxury-experience .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+.luxury-experience h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.luxury-experience p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Luxury Call-to-Action Button */
+.luxury-experience .btn {
+    background: white;
+    color: black;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.luxury-experience .btn:hover {
+    background: black;
+    color: white;
+}
+
+/* ===== Newsletter Signup Section ===== */
+.newsletter {
+    background: black;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Email Input */
+.newsletter-form input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Subscribe Button */
+.newsletter-form .btn {
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.newsletter-form .btn:hover {
+    background: #f5f5f5;
+}
+
+/* ===== Brand Philosophy Section ===== */
+.brand-philosophy {
+    background: white;
+    color: black;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.brand-philosophy h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.brand-philosophy p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Brand Name Highlight */
+.brand-philosophy .brand-name {
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
