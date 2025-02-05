@@ -45,6 +45,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    justify-content: center;
 }
 
 .container h2{
