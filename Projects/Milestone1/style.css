@@ -110,7 +110,7 @@ p {
 /* Featured Products */
 .featured {
     padding: 80px 0;
-    background: #f5f5f5; /* Light gray background for contrast */
+    background: #000000; /* Light gray background for contrast */
     text-align: center;
 }
 
@@ -132,7 +132,7 @@ p {
 
 /* Individual Product Card */
 .featured-item {
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     overflow: hidden;
     width: 320px;
