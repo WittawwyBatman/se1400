@@ -177,7 +177,7 @@ p {
 
 /* ===== Testimonials Section ===== */
 .testimonials {
-    background: #f8f8f8;
+    background: var(--background-color);
     padding: 100px 20px;
     text-align: center;
 }
