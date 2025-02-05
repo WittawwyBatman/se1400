@@ -110,7 +110,7 @@ p {
 /* Featured Products */
 .featured {
     padding: 80px 0;
-    background: #000000; /* Light gray background for contrast */
+    background: var(--background-color); /* Light gray background for contrast */
     text-align: center;
 }
 
