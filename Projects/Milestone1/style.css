@@ -350,18 +350,22 @@ button:hover, .btn:hover {
 }
 
 .product-card {
-    background: #000;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
 }
 
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
 .product-card img {
     width: 100%;
-    display: block;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -370,27 +374,41 @@ button:hover, .btn:hover {
 }
 
 .product-card h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+    font-size: 1.4rem;
+    color: var(--text-color);
     margin-top: 15px;
 }
 
 .product-card p {
     font-size: 1rem;
     color: var(--text-color);
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-.product-card .price {
-    font-size: 1.2rem;
+.product-price {
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent-color);
     margin-top: 10px;
 }
 
-.product-card .btn {
+.product-card .add-to-cart {
     display: inline-block;
     margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card .add-to-cart:hover {
+    background: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 /* Footer */
@@ -414,18 +432,32 @@ footer a:hover {
 
 /* Social Media Icons */
 .social-icons {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    padding-top: 20px;
 }
 
 .social-icons a {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: 0.3s ease-in-out;
+    display: inline-block;
+    width: 40px; /* Adjust size */
+    height: 40px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
+.social-icons img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* Makes icons circular */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
 .social-icons a:hover {
-    color: var(--secondary-color);
+    transform: scale(1.2); /* Slight zoom on hover */
+    opacity: 0.8;
 }
 /* Product Page */
 .product-page {
@@ -650,7 +682,7 @@ footer a:hover {
 
 .order-item-details p {
     font-size: 1rem;
-    color: var(--text-color);
+    color: var (--text-color);
     opacity: 0.7;
 }
 
