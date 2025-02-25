@@ -74,26 +74,17 @@ body {
   #homehero {
     background: url('homehero.jpg') no-repeat center;
     background-size: cover;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
     background-position: center;
   }
   
   #studenthero {
     background: url('studenthero.jpg') no-repeat center;
     background-size: cover;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
     background-position: center;
   }
   
   #facultyhero {
     background: url('facultyhero.jpg') no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
     background-size: cover;
     background-position: center;
   }
