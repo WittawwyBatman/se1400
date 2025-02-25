@@ -77,13 +77,23 @@ footer {
 }
 
 /* Hero Section Styles */
-#homehero, #studenthero, #facultyhero {
+#homehero {
   width: 100%;
   height: 300px;
+  background: url('homehero.jpg') no-repeat center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+#studenthero {
+  width: 100%;
+  height: 300px;
+  background: url('studenthero.jpg') no-repeat center;
+  background-size: cover;
+}
+
+#facultyhero {
+  width: 100%;
+  height: 300px;
+  background: url('facultyhero.jpg') no-repeat center;
+  background-size: cover;
 }
