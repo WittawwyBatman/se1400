@@ -75,17 +75,20 @@ body {
     background: url('homehero.jpg') no-repeat center;
     background-size: cover;
     background-position: center;
+    height: 300px;
   }
   
   #studenthero {
     background: url('studenthero.jpg') no-repeat center;
     background-size: cover;
     background-position: center;
+    height: 300px;
   }
   
   #facultyhero {
     background: url('facultyhero.jpg') no-repeat center;
     background-size: cover;
     background-position: center;
+    height: 300px;
   }
   
