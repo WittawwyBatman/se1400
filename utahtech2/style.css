@@ -72,20 +72,29 @@ body {
   
   /* Hero Section Styles */
   #homehero {
-    height: 300px;
     background: url('homehero.jpg') no-repeat center;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
   }
   
   #studenthero {
-    height: 300px;
     background: url('studenthero.jpg') no-repeat center;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
   }
   
   #facultyhero {
-    height: 300px;
     background: url('facultyhero.jpg') no-repeat center;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
   }
   
