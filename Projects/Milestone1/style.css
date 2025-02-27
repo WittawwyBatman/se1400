@@ -291,6 +291,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 .brand-philosophy p {
