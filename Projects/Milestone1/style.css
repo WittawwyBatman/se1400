@@ -40,23 +40,6 @@ p {
     font-size: 1.1rem;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-}
-
-.container h2{
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 /* Navigation Bar */
 .navbar {
     background: var(--background-color);
@@ -234,6 +217,23 @@ p {
     font-size: 16px;
     font-weight: bold;
     color: black;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.container h2{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .container {
