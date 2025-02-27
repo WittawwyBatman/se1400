@@ -183,7 +183,7 @@ p {
 /* ===== Testimonials Section ===== */
 .testimonials {
     background: var(--background-color);
-    padding: 20px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
