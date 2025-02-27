@@ -129,35 +129,39 @@ p {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    flex-wrap: nowrap;
 }
 
-/* Ensure each item is sized correctly */
+/* Individual Product Card */
 .featured-item {
-    flex: 1 1 300px; /* Allows flexibility while keeping equal width */
-    max-width: 300px; /* Prevents excessive stretching */
     background: rgb(0, 0, 0);
     border-radius: 10px;
     overflow: hidden;
+    width: 300px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
+    padding: 15px;
 }
 
-/* Media Query for Smaller Screens */
-@media (max-width: 900px) {
-    .featured-grid {
-        flex-wrap: wrap; /* Allows wrapping when screen size is reduced */
-    }
-
-    .featured-item {
-        flex: 1 1 calc(50% - 30px); /* Makes two items per row on smaller screens */
-    }
+/* Hover Effect */
+.featured-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 600px) {
-    .featured-item {
-        flex: 1 1 100%; /* Stack items in a single column on very small screens */
-    }
+/* Product Images */
+.featured-img {
+    width: 100%;  /* Ensures image fits within the box */
+    height: 250px; /* Fixed height to prevent tall images */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.featured-item:hover .featured-img {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Price Styling */
