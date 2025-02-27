@@ -198,6 +198,7 @@ p {
 /* Testimonials Grid Layout */
 .testimonial-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
     max-width: 1000px;
     margin: auto;
