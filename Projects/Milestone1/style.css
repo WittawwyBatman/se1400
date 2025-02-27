@@ -59,7 +59,7 @@ p {
 
 /* Navigation Bar */
 .navbar {
-    background: #111;
+    background: var(--background-color);
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -137,7 +137,7 @@ p {
     background: rgb(0, 0, 0);
     border-radius: 10px;
     overflow: hidden;
-    width: 320px;
+    width: 300px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
 }
