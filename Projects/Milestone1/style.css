@@ -237,15 +237,6 @@ p {
     text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 .overlay {
     height: 100%;
