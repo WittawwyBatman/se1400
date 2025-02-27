@@ -152,7 +152,7 @@ p {
 /* Product Images */
 .featured-img {
     width: 100%;  /* Ensures image fits within the box */
-    height: 450px; /* Fixed height to prevent tall images */
+    height: 350px; /* Fixed height to prevent tall images */
     object-fit: cover; /* Ensures the image scales properly without distortion */
     display: block;
     border-radius: 10px;
