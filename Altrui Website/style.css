@@ -64,11 +64,11 @@ nav ul li a:hover {
     font-size: 60px;
     margin-bottom: 20px;
     font-family: 'Permanent Marker', cursive;
-    text-shadow: 4px 4px 0 #000;
+    text-shadow: -2px -2px 0 #ff4500, 2px -2px 0 #ff4500, -2px 2px 0 #ff4500, 2px 2px 0 #ff4500;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid #ff4500;
+    font-weight: bold;
 }
 
 .btn1 {
