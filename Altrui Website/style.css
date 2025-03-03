@@ -58,7 +58,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn a {
     background: #ff4500;
     color: #fff;
     padding: 10px 20px;
@@ -67,7 +67,7 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn a:hover {
     background: #ff2200;
 }
 
