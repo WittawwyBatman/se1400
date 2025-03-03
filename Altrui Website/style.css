@@ -78,11 +78,12 @@ nav ul li a:hover {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    display: flex;
     justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .product {
@@ -94,7 +95,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 280px;
+    width: 260px;
 }
 
 .product:hover {
@@ -103,7 +104,7 @@ nav ul li a:hover {
 
 .product img {
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
