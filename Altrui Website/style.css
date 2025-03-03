@@ -68,6 +68,7 @@ nav ul li a:hover {
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 2px solid #ff4500;
 }
 
 .btn1 {
