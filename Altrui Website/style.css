@@ -67,7 +67,7 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.btn a:hover {
+.btn:hover {
     background: #ff2200;
 }
 
