@@ -54,7 +54,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('BrickWall.jpg');
     text-align: center;
 }
 
