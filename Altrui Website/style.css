@@ -74,14 +74,15 @@ nav ul li a:hover {
 .btn2 {
     background: #222;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px auto;
 }
 
 .btn2:hover {
@@ -94,15 +95,12 @@ nav ul li a:hover {
     padding: 50px 20px;
     background: #ff4500;
     color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
 }
 
 .product-grid {
     display: flex;
     justify-content: center;
-    gap: 0;
+    gap: 10px;
     padding: 20px;
     max-width: 100%;
     margin: 0 auto;
