@@ -121,14 +121,23 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.product h3, .product-price {
+.product h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
     margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .product-price {
     font-size: 18px;
-    color: #ffffff;
     font-weight: bold;
+    color: #ff4500;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-bottom: 10px;
 }
 
 /* Collections Section */
@@ -171,3 +180,5 @@ footer {
     padding: 20px;
     background: #222;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
