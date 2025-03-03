@@ -75,6 +75,12 @@ nav ul li a:hover {
 .featured {
     text-align: center;
     padding: 50px 20px;
+    background: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .product-grid {
