@@ -91,6 +91,10 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
+.featured h2:hover {
+    background: #ff2200;
+}
+
 .product-grid {
     display: flex;
     justify-content: center;
