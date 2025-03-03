@@ -71,6 +71,19 @@ nav ul li a:hover {
     background: #ff2200;
 }
 
+.btn2 {
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn2:hover {
+    background: #333;
+}
+
 /* Featured Products */
 .featured {
     text-align: center;
