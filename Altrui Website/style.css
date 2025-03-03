@@ -1,6 +1,8 @@
 /* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Bangers&family=Press+Start+2P&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Bangers', cursive;
     margin: 0;
     padding: 0;
     background-color: #111;
@@ -17,12 +19,15 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 3px solid #ff4500;
 }
 
 nav .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #ff4500;
 }
 
 nav ul {
@@ -36,6 +41,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
+    font-family: 'Press Start 2P', cursive;
 }
 
 nav ul li a:hover {
@@ -49,32 +55,37 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background: url('brick-wall.jpg') no-repeat center center/cover;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 4px 4px 0 #000;
 }
 
 .btn1 {
     background: #ff4500;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.3s;
+    border: 2px solid #000;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .btn1:hover {
     background: #ff2200;
+    transform: scale(1.05);
 }
 
 .btn2 {
     background: #222;
     color: #fff;
-    padding: 10px 15px;
+    padding: 8px 12px;
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
@@ -83,6 +94,8 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     margin: 10px auto;
+    font-family: 'Bangers', cursive;
+    border: 2px solid #ff4500;
 }
 
 .btn2:hover {
@@ -106,44 +119,38 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33.33%;
-    padding: 0;
-}
-
 .product img {
     width: 100%;
     height: auto;
-    border-radius: 0;
+    border-radius: 5px;
     margin-bottom: 10px;
+    border: 3px solid #000;
 }
 
 .product h3 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #fff;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    margin: 5px 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .product-price {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #ff4500;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin-bottom: 10px;
+    font-family: 'Bangers', cursive;
 }
 
 /* Collections Section */
 #collections {
     text-align: center;
     padding: 50px 20px;
+    background: #181818;
 }
 
 .collection-grid {
@@ -161,6 +168,7 @@ nav ul li a:hover {
     transition: 0.3s;
     flex: 1;
     min-width: 200px;
+    font-family: 'Bangers', cursive;
 }
 
 .collection:hover {
@@ -171,7 +179,8 @@ nav ul li a:hover {
 #about {
     text-align: center;
     padding: 50px 20px;
-    background: #181818;
+    background: #111;
+    border-top: 4px solid #ff4500;
 }
 
 /* Footer */
@@ -179,6 +188,5 @@ footer {
     text-align: center;
     padding: 20px;
     background: #222;
+    font-family: 'Press Start 2P', cursive;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
