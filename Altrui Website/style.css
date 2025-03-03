@@ -370,3 +370,13 @@ footer a:hover {
 .brand-content {
     text-align: center;
 }
+
+.brand-content h2{
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -2px -2px 0 #ff4500, 2px -2px 0 #ff4500, -2px 2px 0 #ff4500, 2px 2px 0 #ff4500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    margin: 0;
+}
