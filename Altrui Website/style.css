@@ -1,17 +1,17 @@
 /* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('middle-fingerr.png');
+@import url('file:///Users/jeremiah/Downloads/middle-finger-removebg-preview.png');
 body {
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     padding: 0;
     background-color: #111;
     color: #fff;
-    cursor: url('images/middle-fingerr.png'), auto;
+    cursor: url('file:///Users/jeremiah/Downloads/middle-finger-removebg-preview.png'), auto;
 }
 
 * {
-    cursor: url('images/middle-fingerr.png'), auto;
+    cursor: url('file:///Users/jeremiah/Downloads/middle-finger-removebg-preview.png'), auto;
 }
 
 a {
