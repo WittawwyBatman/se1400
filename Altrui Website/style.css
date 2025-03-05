@@ -114,7 +114,7 @@ nav ul li a:hover {
     height: 90vh;
 }
 
-.featured:hover {
+.product:hover {
     background: #ff2200;
     transform: scale(1.05);
 }
