@@ -103,6 +103,7 @@ nav ul li a:hover {
 
 .btn2:hover {
     background: #ff4500;
+    transform: scale(1.05);
 }
 
 /* Featured Products */
