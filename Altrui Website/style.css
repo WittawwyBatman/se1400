@@ -114,6 +114,11 @@ nav ul li a:hover {
     height: 90vh;
 }
 
+.featured:hover {
+    background: #ff2200;
+    transform: scale(1.05);
+}
+
 .product-grid {
     display: flex;
     justify-content: center;
