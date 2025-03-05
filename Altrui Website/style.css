@@ -166,7 +166,7 @@ nav ul li a:hover {
 #collections {
     text-align: center;
     padding: 50px 20px;
-    background: #181818;
+    background: #000000;
 }
 
 .collection-grid {
@@ -177,7 +177,7 @@ nav ul li a:hover {
 }
 
 .collection {
-    background: #222;
+    background: #000000;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -187,7 +187,8 @@ nav ul li a:hover {
 }
 
 .collection:hover {
-    background: #333;
+    background: #ff2200;
+    transform: scale(1.05);
 }
 
 /* About Section */
