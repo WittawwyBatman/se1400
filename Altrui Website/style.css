@@ -14,6 +14,14 @@ body {
     cursor: url('images/middle-finger.png'), auto;
 }
 
+a {
+    cursor: url('images/middle-finger-click.png'), pointer;
+}
+
+button, input[type="submit"] {
+    cursor: url('images/middle-finger-click.png'), pointer;
+}
+
 /* Navigation Bar */
 nav {
     display: flex;
