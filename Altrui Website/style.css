@@ -7,11 +7,11 @@ body {
     padding: 0;
     background-color: #111;
     color: #fff;
-    cursor: url('images/middle-finger.png'), auto;
+    cursor: url('images/Middle-Finger.png'), auto;
 }
 
 * {
-    cursor: url('images/middle-finger.png'), auto;
+    cursor: url('images/Middle-Finger.png'), auto;
 }
 
 a {
