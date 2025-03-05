@@ -184,6 +184,7 @@ nav ul li a:hover {
     transition: 0.3s;
     flex: 1;
     min-width: 200px;
+    border: 2px solid #ff4500;
 }
 
 .collection:hover {
