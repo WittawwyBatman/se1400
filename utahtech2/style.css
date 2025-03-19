@@ -78,7 +78,6 @@ footer {
 
 /* Hero Section Styles */
 #homehero {
-  width: 100%;
   height: 300px;
   background: url('homehero.jpg') no-repeat center;
   background-size: cover;
@@ -86,7 +85,6 @@ footer {
 }
 
 #studenthero {
-  width: 100%;
   height: 300px;
   background: url('studenthero.jpg') no-repeat center;
   background-size: cover;
@@ -95,14 +93,12 @@ footer {
 
 #student-life {
   width: 300px;
-  height: 100%;
   background: url('students.html') no-repeat center;
   background-size: cover;
   background-position: center;
 }
 
 #facultyhero {
-  width: 100%;
   height: 300px;
   background: url('facultyhero.jpg') no-repeat center;
   background-size: cover;
