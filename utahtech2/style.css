@@ -79,6 +79,7 @@ footer {
 /* Hero Section Styles */
 #homehero {
   height: 300px;
+  width: 960px;
   background-image: url("images/homehero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
