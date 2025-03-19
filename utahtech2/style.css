@@ -87,10 +87,11 @@ footer {
 
 #studenthero {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background: url('studenthero.jpg') no-repeat center;
   background-size: cover;
   background-position: center;
+  padding: 2rem;
 }
 
 #student-life {
@@ -99,6 +100,7 @@ footer {
   background: url('students.html') no-repeat center;
   background-size: cover;
   background-position: center;
+  padding: 2rem;
 }
 
 #facultyhero {
@@ -107,4 +109,5 @@ footer {
   background: url('facultyhero.jpg') no-repeat center;
   background-size: cover;
   background-position: center;
+  padding: 2rem;
 }
