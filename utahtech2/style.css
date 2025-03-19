@@ -93,6 +93,14 @@ footer {
   background-position: center;
 }
 
+#student-life {
+  width: 100%;
+  height: 300px;
+  background: url('students.html') no-repeat center;
+  background-size: cover;
+  background-position: center;
+}
+
 #facultyhero {
   width: 100%;
   height: 300px;
