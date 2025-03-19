@@ -6,19 +6,6 @@ body {
     padding: 0;
     background-color: #111;
     color: #fff;
-    cursor: url('images/middle-fingar.png'), auto;
-}
-
-* {
-    cursor: url('images/middle-fingar.png'), auto;
-}
-
-a {
-    cursor: url('images/middle-fingar-click.png'), pointer;
-}
-
-button, input[type="submit"] {
-    cursor: url('images/middle-fingar-click.png'), pointer;
 }
 
 /* Navigation Bar */
