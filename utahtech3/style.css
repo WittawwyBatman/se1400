@@ -19,7 +19,7 @@ header h1 {
     line-height: 140%;
     padding: .5rem;
     padding-left: 1em;
-    background-image: url(utahtechimages/utahtechlogo.svg);
+    background-image: url("images/utahtechlogo.svg");
     background-position: right;
     background-repeat: no-repeat;
     background-origin: content-box;
