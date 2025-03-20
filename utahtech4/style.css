@@ -99,6 +99,7 @@ main img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-area: 3 / 1 / 4 / 9;
   }
   #studenthero {
     height: 300px;
@@ -106,6 +107,7 @@ main img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-area: 3 / 1 / 4 / 9;
   }
   #facultyhero {
     height: 300px;
@@ -113,6 +115,7 @@ main img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-area: 3 / 1 / 4 / 9;
   }
 #bluebar {
     background-color: #003058;
