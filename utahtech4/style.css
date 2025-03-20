@@ -95,28 +95,25 @@ main img {
 }
 #homehero {
     height: 300px;
-    background-image: url(utahtechimages/homehero.jpg);
+    background-image: url("images/homehero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-area: 3 / 1 / 4 / 9;
-}
-#studenthero {
+  }
+  #studenthero {
     height: 300px;
-    background-image: url(utahtechimages/studenthero.jpg);
+    background-image: url("images/studenthero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-area: 3 / 1 / 4 / 9;
-}
-#facultyhero {
+  }
+  #facultyhero {
     height: 300px;
-    background-image: url(utahtechimages/facultyhero.jpg);
+    background-image: url("images/facultyhero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-area: 3 / 1 / 4 / 9;
-}
+  }
 #bluebar {
     background-color: #003058;
     grid-area: 1 / 1 / 2 / 9;
