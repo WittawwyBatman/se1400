@@ -118,7 +118,7 @@ h4 {
     max-width: 800px;
     text-align: center;
     font-family: liberation serif;
-    border: #000;
+    box-shadow:#000;
 }
 
 p {
