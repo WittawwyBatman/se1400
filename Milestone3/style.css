@@ -54,6 +54,29 @@ nav ul li a:hover {
     color: #959393;
 }
 
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/BrickWall.jpg') no-repeat center center/cover;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: -2px -2px 0 #ff4500, 2px -2px 0 #ff4500, -2px 2px 0 #ff4500, 2px 2px 0 #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 /* Main Content */
 main {
     max-width: 800px;
