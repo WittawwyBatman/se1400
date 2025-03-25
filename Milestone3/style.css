@@ -92,9 +92,6 @@ nav ul li a:hover {
 
 /* Main Content */
 main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
     border-radius: 8px;
     background: url('images/brickwall.webp') no-repeat center center/cover;
     background-size: cover;
