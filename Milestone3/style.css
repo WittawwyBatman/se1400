@@ -6,8 +6,6 @@ body {
     padding: 0;
     background-color: black;
     color: #fff;
-    background: url('images/brickwall.webp') no-repeat center center/cover;
-    background-size: cover;
 }
 
 /* Header */
@@ -100,6 +98,8 @@ main {
     background-color: #959393;
     box-shadow: 0 0 10px #000000(0, 0, 0, 0.1);
     border-radius: 8px;
+    background: url('images/brickwall.webp') no-repeat center center/cover;
+    background-size: cover;
 }
 
 h2 {
