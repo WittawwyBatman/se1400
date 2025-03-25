@@ -103,8 +103,6 @@ h2 {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #959393;
-    box-shadow: 0 0 10px #000000(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -115,8 +113,6 @@ h4 {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #959393;
-    box-shadow: 0 0 10px #000000(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -127,8 +123,6 @@ p {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #959393;
-    box-shadow: 0 0 10px #000000(0, 0, 0, 0.1);
     text-align: center;
 }
 
