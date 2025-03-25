@@ -6,6 +6,8 @@ body {
     padding: 0;
     background-color: black;
     color: #fff;
+    background: url('images/brickwall.webp') no-repeat center center/cover;
+    background-size: cover;
 }
 
 /* Header */
@@ -60,8 +62,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('images/brickwall.webp') no-repeat center center/cover;
-    background-size: cover;
     text-align: center;
     padding: 20px;
 }
