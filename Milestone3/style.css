@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #4c3715;
+    color: #7700ff;
 }
 
 /* Main Content */
@@ -59,7 +59,7 @@ main {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #4c3715;
+    background-color: #7700ff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
