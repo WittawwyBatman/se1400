@@ -112,7 +112,7 @@ h2 {
 h4 {
     margin-top: 20px;
     font-size: 30px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-style: bold;
     margin: 40px auto;
     max-width: 800px;
@@ -123,7 +123,7 @@ h4 {
 p {
     font-size: 16px;
     line-height: 1.5;
-    color: black;
+    color: rgb(255, 255, 255);
     max-width: 800px;
     padding: 10px;
     margin: 40px auto;
