@@ -125,6 +125,7 @@ p {
     line-height: 1.5;
     color: black;
     max-width: 800px;
+    padding: 10px;
     margin: 40px auto;
     text-align: center;
     font-family: liberation serif;
