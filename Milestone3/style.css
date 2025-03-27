@@ -5,9 +5,10 @@ body {
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     padding: 0;
-    background: url('images/brickwall.webp') repeat-y center top;
-    background-size: 100% auto;
+    background: url('images/brickwall.webp') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
+    min-height: 100vh;
 }
 
 /* Overlay to darken the background slightly for better readability */
@@ -75,9 +76,6 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: url('images/brickwall.webp') repeat-y center top;
-    background-size: 100% auto;
-    width: 100%;
     position: relative;
 }
 
