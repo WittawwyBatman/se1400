@@ -52,7 +52,7 @@ body::before {
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000;  /* Fully black */
     color: white;
     padding: 20px;
     text-align: center;
@@ -64,7 +64,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
+    background: #000;  /* Fully black */
     position: sticky;
     top: 0;
     z-index: 1000;
