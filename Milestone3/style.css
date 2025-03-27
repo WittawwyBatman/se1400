@@ -52,7 +52,7 @@ body::before {
 
 /* Header - Full Width */
 header {
-    width: 100%;  /* Ensures full width */
+    width: 90%;  /* Ensures full width */
     background-color: #000;  /* Fully black */
     color: white;
     padding: 20px 0;  /* Top and bottom padding */
