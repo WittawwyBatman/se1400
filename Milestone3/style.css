@@ -11,6 +11,31 @@ body {
     min-height: 100vh;
 }
 
+/* Sidebars */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 8%;
+    background-color: black;
+    z-index: 999;
+}
+
+.sidebar.left {
+    left: 0;
+}
+
+.sidebar.right {
+    right: 0;
+}
+
+/* Main Content Area */
+.main-content {
+    width: 84%;
+    position: relative;
+    z-index: 1;
+}
+
 /* Overlay to darken the background slightly for better readability */
 body::before {
     content: "";

@@ -8,59 +8,78 @@
     <title>Autrui - Home</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Altrui</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="competition.html">Competition</a></li>
-                <li><a href="audience.html">Audience</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Black Sidebars -->
+    <div class="sidebar left"></div>
+    <div class="sidebar right"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <nav>
+                <div class="logo">Autrui</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="competition.html">Competition</a></li>
+                    <li><a href="audience.html">Audience</a></li>
+                </ul>
+
+                <!-- Pop-down Navigation Trigger -->
+                <div class="popdown-trigger">☰ More</div>
+            </nav>
+
+            <!-- Pop-down Navigation -->
+            <div class="popdown-nav">
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 class="graffiti-text">Skate Freely. Look Effortless.</h1>
+            <a href="#shop" class="btn1">Shop Now</a>
+        </section>
+
+        <main>
+            <h2>Website Summary:</h2>
+
+            <h4>What content will the site contain?</h4>
+            <p>The site will showcase Autrui's luxury fashion collection, including product images, descriptions, and purchasing options.</p>
+
+            <h4>Where will you get all of the content for your site (ie. images & text)?</h4>
+            <p>Images and text will be sourced from Autrui's original designs, professional photography, and well-crafted brand messaging.</p>
+
+            <h4>Why should users care about the focus of the site?</h4>
+            <p>Autrui offers high-end fashion with unique, modern aesthetics. The site presents a seamless, luxurious shopping experience.</p>
+
+            <h4>Why should a site be built for this?</h4>
+            <p>An online presence is crucial for brand recognition, sales, and engagement with the target audience.</p>
+
+            <h4>What would you like users to do at your site?</h4>
+            <p>Users should browse collections, learn about the brand, and make purchases.</p>
+
+            <h4>What is the goal of the site?</h4>
+            <p>To establish Autrui as a luxury fashion brand and drive online sales.</p>
+        </main>
+
+        <footer>
+            <h6>Copyright &copy; 2025</h6>
+        </footer>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const trigger = document.querySelector(".popdown-trigger");
             const popdownNav = document.querySelector(".popdown-nav");
-        
+
             trigger.addEventListener("mouseover", function () {
                 popdownNav.style.display = "flex";
             });
-        
+
             popdownNav.addEventListener("mouseleave", function () {
                 popdownNav.style.display = "none";
             });
         });
-        </script>
-    <section class="hero">
-        <h1 class="graffiti-text">Skate Freely. Look Effortless.</h1>
-        <a href="#shop" class="btn1">Shop Now</a>
-    </section>
-
-    <main>
-        <h2>Website Summary:</h2>
-        
-        <h4>What content will the site contain?</h4>
-        <p>The site will showcase Autrui's luxury fashion collection, including product images, descriptions, and purchasing options.</p>
-        
-        <h4>Where will you get all of the content for your site (ie. images & text)?</h4>
-        <p>Images and text will be sourced from Autrui's original designs, professional photography, and well-crafted brand messaging.</p>
-        
-        <h4>Why should users care about the focus of the site?</h4>
-        <p>Autrui offers high-end fashion with unique, modern aesthetics. The site presents a seamless, luxurious shopping experience.</p>
-        
-        <h4>Why should a site be built for this?</h4>
-        <p>An online presence is crucial for brand recognition, sales, and engagement with the target audience.</p>
-        
-        <h4>What would you like users to do at your site?</h4>
-        <p>Users should browse collections, learn about the brand, and make purchases.</p>
-        
-        <h4>What is the goal of the site?</h4>
-        <p>To establish Autrui as a luxury fashion brand and drive online sales.</p>
-    </main>
-    
-    <footer>
-        <h6>Copyright &copy; 2025</h6>
-    </footer>
+    </script>
 </body>
 </html>
