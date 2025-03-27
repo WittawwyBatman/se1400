@@ -54,13 +54,14 @@ body::before {
 header {
     position: fixed;
     top: 0;
-    left: 2%;  /* Align to start after left sidebar */
-    width: 96%; /* Adjust width to fit between sidebars */
-    background-color: #000;  /* Fully black */
+    left: 2%;
+    width: 96%;
+    background-color: #000;
     color: white;
-    padding: 20px 0; /* Adjust padding for better spacing */
+    padding: 20px 0;
     text-align: center;
     z-index: 1000;
+    transition: top 0.3s;  /* Smooth hiding of header */
 }
 
 /* Navigation Bar */
