@@ -54,14 +54,13 @@ body::before {
 header {
     position: fixed;
     top: 0;
-    left: 2%;
-    width: 96%;
-    background-color: #000;
+    left: 2%;  /* Align to start after left sidebar */
+    width: 96%; /* Adjust width to fit between sidebars */
+    background-color: #000;  /* Fully black */
     color: white;
-    padding: 20px 0;
+    padding: 20px 0; /* Adjust padding for better spacing */
     text-align: center;
     z-index: 1000;
-    transition: top 0.3s;  /* Smooth hiding of header */
 }
 
 /* Navigation Bar */
@@ -73,21 +72,6 @@ nav {
     padding: 20px;
     background: #000;
     border-bottom: 3px solid #959393;
-}
-
-/* Altrui Logo - Background and Transparent Effect */
-header .logo {
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;  /* Center vertically */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center it */
-    color: white;
-    opacity: 0.2; /* Slightly transparent initially */
-    z-index: -1;  /* Placing it behind other content */
-    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
 nav .logo {
