@@ -50,17 +50,33 @@ body::before {
     z-index: -1;
 }
 
-/* Header */
+/* Header (Sticky) */
 header {
-    position: fixed;
+    position: fixed;  /* Keep header fixed at top */
     top: 0;
-    left: 2%;  /* Align to start after left sidebar */
-    width: 96%; /* Adjust width to fit between sidebars */
-    background-color: #000;  /* Fully black */
+    left: 2%;
+    width: 96%;
+    background-color: #000;
     color: white;
-    padding: 20px 0; /* Adjust padding for better spacing */
+    padding: 20px 0;
     text-align: center;
     z-index: 1000;
+    transition: top 0.3s ease; /* Smooth hiding of header */
+}
+
+/* Logo - Positioned Behind Content */
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.2;
+    z-index: -1;  /* Put the logo behind other content */
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
 /* Navigation Bar */
