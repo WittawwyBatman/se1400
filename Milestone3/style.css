@@ -52,7 +52,7 @@ body::before {
 
 /* Header */
 header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 2%;  /* Align to start after left sidebar */
     width: 96%; /* Adjust width to fit between sidebars */
