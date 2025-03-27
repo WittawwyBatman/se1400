@@ -56,12 +56,12 @@ header {
     top: 0;
     left: 2%;
     width: 96%;
-    background-color: rgba(0, 0, 0, 0.8);  /* Slight transparency */
+    background-color: rgba(0, 0, 0, 0);  /* Transparent initially */
     color: white;
     padding: 20px 0;
     text-align: center;
     z-index: 1000;
-    transition: top 0.3s ease; /* Smooth hiding of header */
+    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth hiding of header */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  /* Adding a subtle shadow for luxury feel */
 }
 
@@ -75,7 +75,7 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;  /* Behind the text but still visible */
-    opacity: 0.2; /* Transparent */
+    opacity: 1;  /* Fully visible at first */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 

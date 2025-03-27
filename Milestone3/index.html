@@ -98,13 +98,13 @@
     
             // If scrolling down
             if (scrollTop > lastScrollTop) {
-                header.style.top = "-100px";  // Hide the header when scrolling down
-                logo.style.opacity = "0.4";   // Make the logo slightly more transparent
-                logo.style.transform = "translate(-50%, -50%)";  // Move the logo slightly down
+                header.style.backgroundColor = "rgba(0, 0, 0, 0.8)";  // Make header slightly transparent
+                logo.style.opacity = "0.2";   // Make logo more transparent
+                logo.style.transform = "translate(-50%, -50%)";  // Move logo behind the text
             } else {
-                header.style.top = "0";   // Show the header when scrolling up
-                logo.style.opacity = "0.2";  // Reset logo opacity
-                logo.style.transform = "translate(-50%, -50%)";  // Reset logo position
+                header.style.backgroundColor = "rgba(0, 0, 0, 0)";  // Fully transparent header
+                logo.style.opacity = "1";   // Make logo visible again
+                logo.style.transform = "translate(-50%, -50%)";  // Keep logo centered in front of the text
             }
     
             // Store the last scroll position
