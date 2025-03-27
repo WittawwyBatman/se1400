@@ -84,6 +84,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
+    text-align: center;
     gap: 20px;
 }
 
