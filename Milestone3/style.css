@@ -85,6 +85,7 @@ nav ul {
     list-style: none;
     display: flex;
     text-align: center;
+    padding-right: 10px;
     gap: 20px;
 }
 
