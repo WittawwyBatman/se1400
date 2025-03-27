@@ -9,9 +9,11 @@ body {
     background-size: cover;
     color: #fff;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
-/* Sidebars */
+/* Black Sidebars */
 .sidebar {
     position: fixed;
     top: 0;
@@ -29,14 +31,14 @@ body {
     right: 0;
 }
 
-/* Main Content Area */
+/* Main Content */
 .main-content {
     width: 84%;
     position: relative;
     z-index: 1;
 }
 
-/* Overlay to darken the background slightly for better readability */
+/* Dark Overlay for Readability */
 body::before {
     content: "";
     position: fixed;
@@ -92,28 +94,26 @@ nav ul li a:hover {
     color: #ff4500;
 }
 
-
 /* Pop-down Navigation */
 .popdown-nav {
-    position: fixed;
-    top: 0;
-    right: 8%;
-    background: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
     color: white;
     width: 200px;
     padding: 10px;
     display: none;
     flex-direction: column;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .popdown-nav a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 12px;
     transition: 0.3s;
 }
 
@@ -122,24 +122,32 @@ nav ul li a:hover {
 }
 
 .popdown-trigger {
-    position: absolute;
-    top: 10px;
-    right: 10%;
     background: black;
     color: white;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    position: relative;
 }
 
 .popdown-trigger:hover {
     background: #ff4500;
 }
 
+.popdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popdown-container:hover .popdown-nav {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,6 +178,7 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+/* Button Styling */
 .btn1 {
     background: #000000;
     color: #fff;
@@ -177,13 +186,14 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 20px;
     transition: 0.3s;
-    border: 2px solid #000;
+    border: 2px solid #ff4500;
     position: relative;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .btn1:hover {
-    background: #ff2200;
+    background: #ff4500;
     transform: scale(1.05);
 }
 
