@@ -129,7 +129,7 @@ nav ul li a:hover {
 .popdown-trigger {
     background: black;
     color: white;
-    padding-right: 20px;
+    padding-right: 40px;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
