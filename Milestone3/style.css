@@ -75,6 +75,21 @@ nav {
     border-bottom: 3px solid #959393;
 }
 
+/* Altrui Logo - Background and Transparent Effect */
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+    color: white;
+    opacity: 0.2; /* Slightly transparent initially */
+    z-index: -1;  /* Placing it behind other content */
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
 nav .logo {
     font-size: 28px;
     font-weight: bold;
