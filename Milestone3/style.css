@@ -98,11 +98,12 @@ nav ul li a:hover {
     color: #ff4500;
 }
 
+
 /* Pop-down Navigation */
 .popdown-nav {
     position: absolute;
     top: 60px;
-    right: 2.5%; /* Shift it slightly left to avoid sidebar */
+    right: 0;
     background: rgba(0, 0, 0, 0.95);
     color: white;
     width: 200px;
@@ -112,18 +113,6 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    z-index: 1001; /* Ensure it stays above sidebars */
-}
-
-/* Popdown Trigger */
-.popdown-trigger {
-    background: black;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-    position: relative;
 }
 
 .popdown-nav a {
@@ -137,6 +126,15 @@ nav ul li a:hover {
     background: #ff4500;
 }
 
+.popdown-trigger {
+    background: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+}
 
 .popdown-trigger:hover {
     background: #ff4500;
