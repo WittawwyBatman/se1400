@@ -63,18 +63,56 @@
     </div>
 
     <script>
+        // Wait for the DOM to load before attaching event listeners
         document.addEventListener("DOMContentLoaded", function () {
+            // Popdown Navigation functionality
             const trigger = document.querySelector(".popdown-trigger");
             const popdownNav = document.querySelector(".popdown-nav");
-
-            trigger.addEventListener("mouseover", function () {
-                popdownNav.style.display = "flex";
-            });
-
-            popdownNav.addEventListener("mouseleave", function () {
-                popdownNav.style.display = "none";
+    
+            trigger.addEventListener("mouseover", showPopdownNav);
+            popdownNav.addEventListener("mouseleave", hidePopdownNav);
+    
+            // Header Scroll behavior
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", function () {
+                handleHeaderScroll(lastScrollTop);
             });
         });
+    
+        // Show popdown navigation when hovering over the trigger
+        function showPopdownNav() {
+            const popdownNav = document.querySelector(".popdown-nav");
+            popdownNav.style.display = "flex";
+        }
+    
+        // Hide popdown navigation when mouse leaves
+        function hidePopdownNav() {
+            const popdownNav = document.querySelector(".popdown-nav");
+            popdownNav.style.display = "none";
+        }
+    
+        // Handle header scrolling behavior
+        function handleHeaderScroll(lastScrollTop) {
+            const header = document.querySelector("header");
+            const logo = document.querySelector(".logo");
+    
+            // Get the scroll position
+            let scrollTop = window.scrollY;
+    
+            // If scrolling down
+            if (scrollTop > lastScrollTop) {
+                header.style.top = "-100px";  // Hide the header when scrolling down
+                logo.style.opacity = "0.4";   // Make the logo slightly more transparent
+                logo.style.top = "70%";  // Move the logo down slightly as you scroll
+            } else {
+                header.style.top = "0";   // Show the header when scrolling up
+                logo.style.opacity = "0.2";  // Reset logo opacity
+                logo.style.top = "50%";   // Reset logo position
+            }
+    
+            // Store the last scroll position
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
     </script>
 </body>
 </html>
