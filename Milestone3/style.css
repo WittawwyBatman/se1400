@@ -50,17 +50,12 @@ body::before {
     z-index: -1;
 }
 
-/* Header - Full Width */
+/* Header */
 header {
-    width: 100%;  /* Ensures full width */
     background-color: #000;  /* Fully black */
     color: white;
-    padding: 20px 0;  /* Top and bottom padding */
+    padding: 20px;
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 /* Navigation Bar */
@@ -68,7 +63,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;  /* Full width */
     padding: 20px;
     background: #000;  /* Fully black */
     position: sticky;
