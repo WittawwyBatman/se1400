@@ -67,6 +67,51 @@ nav ul li a:hover {
     color: #ff4500;
 }
 
+
+/* Pop-down Navigation */
+.popdown-nav {
+    position: fixed;
+    top: 0;
+    right: 8%;
+    background: black;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.popdown-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.popdown-nav a:hover {
+    background: #ff4500;
+}
+
+.popdown-trigger {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    background: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.popdown-trigger:hover {
+    background: #ff4500;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;

@@ -18,7 +18,20 @@
             </ul>
         </nav>
     </header>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trigger = document.querySelector(".popdown-trigger");
+            const popdownNav = document.querySelector(".popdown-nav");
+        
+            trigger.addEventListener("mouseover", function () {
+                popdownNav.style.display = "flex";
+            });
+        
+            popdownNav.addEventListener("mouseleave", function () {
+                popdownNav.style.display = "none";
+            });
+        });
+        </script>
     <section class="hero">
         <h1 class="graffiti-text">Skate Freely. Look Effortless.</h1>
         <a href="#shop" class="btn1">Shop Now</a>
