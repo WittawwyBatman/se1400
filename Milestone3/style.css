@@ -5,8 +5,8 @@ body {
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     padding: 0;
-    background: url('images/brickwall.webp') no-repeat center center fixed;
-    background-size: cover;
+    background: url('images/brickwall.webp') repeat-y center top;
+    background-size: 100% auto;
     color: #fff;
 }
 
@@ -75,8 +75,8 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: url('images/brickwall.webp') no-repeat center center;
-    background-size: cover;
+    background: url('images/brickwall.webp') repeat-y center top;
+    background-size: 100% auto;
     width: 100%;
     position: relative;
 }
