@@ -53,6 +53,7 @@ body::before {
 /* Header */
 header {
     background-color: #000;  /* Fully black */
+    width: 94%;
     color: white;
     padding: 20px;
     text-align: center;
