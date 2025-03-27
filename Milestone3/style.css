@@ -54,7 +54,8 @@ body::before {
 header {
     position: fixed;
     top: 0;
-    width: 96%; /* Adjust width to fit between sidebars */
+    left: 2%;  /* Align to start after left sidebar */
+    width: 94%; /* Adjust width to fit between sidebars */
     background-color: #000;  /* Fully black */
     color: white;
     padding: 20px 0; /* Adjust padding for better spacing */
