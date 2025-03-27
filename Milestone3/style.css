@@ -81,14 +81,6 @@ nav .logo {
     text-transform: uppercase;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    text-align: center;
-    padding-right: 40px;
-    gap: 20px;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
