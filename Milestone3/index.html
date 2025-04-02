@@ -25,35 +25,77 @@
             </nav>
         </header>
 
-        <!-- Hero Section with Animations -->
+        <!-- Hero Section -->
         <section class="hero">
             <h1 class="graffiti-text">Skate Freely. Look Effortless.</h1>
             <a href="#shop" class="btn1">Shop Now</a>
         </section>
 
-        <!-- Main Content Area -->
-        <main>
-            <section class="about">
-                <h2>Autrui:</h2>
-                <p>Autrui is more than a skate brand—it's an attitude, a rebellion, a movement. 
-                   Designed for those who refuse to conform, our collection blends high fashion with street culture.</p>
-                <p>Explore, express, and elevate your style.</p>
-            </section>
-        </main>
+        <!-- About Section -->
+        <section class="about">
+            <h2>Autrui:</h2>
+            <p>Autrui is more than a skate brand—it's an attitude, a rebellion, a movement.
+               Designed for those who refuse to conform, our collection blends high fashion with street culture.</p>
+            <p>Explore, express, and elevate your style.</p>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h2>Featured Collection</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/product1.jpg" alt="Autrui Jacket">
+                    <h4>Signature Autrui Jacket</h4>
+                    <p>Premium craftsmanship meets street-ready aesthetics.</p>
+                </div>
+                <div class="product">
+                    <img src="images/product2.jpg" alt="Skate Deck">
+                    <h4>Limited Edition Skate Deck</h4>
+                    <p>Engineered for performance. Designed for statement.</p>
+                </div>
+                <div class="product">
+                    <img src="images/product3.jpg" alt="Autrui Hoodie">
+                    <h4>Autrui Oversized Hoodie</h4>
+                    <p>Luxury comfort with a raw, rebellious touch.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Philosophy -->
+        <section class="brand-philosophy">
+            <h2>What Drives Us?</h2>
+            <p>Autrui stands at the intersection of rebellion and sophistication. 
+               Every piece is crafted for those who dare to redefine fashion.</p>
+            <p>We value authenticity, bold design, and the relentless pursuit of innovation.</p>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What People Are Saying</h2>
+            <div class="testimonial">
+                <p>"Autrui isn't just clothing—it's a movement. The quality is unreal."</p>
+                <h4>- Aiden K., NYC</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Skate gear that makes a statement. I'm obsessed with the details."</p>
+                <h4>- Sophia R., LA</h4>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <h2>Stay in the Loop</h2>
+            <p>Be the first to know about new drops, collabs, and exclusive offers.</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
 
         <!-- Footer -->
         <footer>
             <h6>&copy; 2025 Autrui. All Rights Reserved.</h6>
         </footer>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const trigger = document.querySelector(".popdown-trigger");
-            const popdownNav = document.querySelector(".popdown-nav");
-            trigger.addEventListener("mouseover", () => popdownNav.classList.add("visible"));
-            popdownNav.addEventListener("mouseleave", () => popdownNav.classList.remove("visible"));
-        });
-    </script>
 </body>
 </html>

@@ -122,6 +122,124 @@ p {
     color: #cccccc;
 }
 
+/* Featured Products */
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #ff4500;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.product-card .btn1 {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Testimonials */
+.testimonials {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.testimonial-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-left: 4px solid #ff4500;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-box p {
+    font-size: 18px;
+    color: #ddd;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-box h4 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #ff4500;
+}
+
+/* Newsletter Signup */
+.newsletter {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4500;
+}
+
+.newsletter input {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    background: #ff4500;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #e03c00;
+}
+
 /* Footer */
 footer {
     background: #000;
