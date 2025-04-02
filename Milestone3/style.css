@@ -133,7 +133,7 @@ p {
     flex-wrap: wrap;  /* Allows wrapping to the next line on smaller screens */
 }
 
-.product-card {
+.product-grid {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
@@ -145,28 +145,28 @@ p {
     max-width: 300px;  /* Maximum width for uniformity */
 }
 
-.product-card:hover {
+.product:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
 }
 
-.product-card img {
+.product img {
     width: 100%;
     border-radius: 10px;
 }
 
-.product-card h3 {
+.product h3 {
     font-size: 22px;
     margin: 15px 0;
     color: #ff4500;
 }
 
-.product-card p {
+.product p {
     font-size: 16px;
     color: #ddd;
 }
 
-.product-card .btn1 {
+.product .btn1 {
     display: inline-block;
     margin-top: 10px;
     font-size: 16px;
