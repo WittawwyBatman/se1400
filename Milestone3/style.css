@@ -164,6 +164,7 @@ p {
 
 .product img {
     width: 100%;
+    height: auto;  /* Ensure images maintain aspect ratio */
     border-radius: 10px;
 }
 
