@@ -1,236 +1,162 @@
-/* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* Importing Luxury Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;600&family=Oswald:wght@300;700&display=swap');
 
-body {
-    font-family: 'Permanent Marker', cursive;
+/* Universal Reset */
+* {
     margin: 0;
     padding: 0;
-    background: url('images/brickwall.webp') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;
 }
 
-/* Black Sidebars */
+/* Body Styling */
+body {
+    font-family: 'Unbounded', sans-serif;
+    background: url('images/high-end-texture.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sidebars - Adds Chaos */
 .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 2%;
-    background-color: black;
+    width: 5%;
+    background: linear-gradient(to bottom, black, #ff4500);
     z-index: 999;
 }
+.sidebar.left { left: 0; }
+.sidebar.right { right: 0; }
 
-.sidebar.left {
-    left: 0;
-}
-
-.sidebar.right {
-    right: 0;
-}
-
-/* Main Content */
-.main-content {
-    width: 84%;
-    position: relative;
-    z-index: 1;
-}
-
-/* Dark Overlay for Readability */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-/* Header (Sticky) */
+/* Header Styling - Floating Effect */
 header {
     position: fixed;
     top: 0;
-    left: 2%;
-    width: 96%;
-    background-color: rgba(0, 0, 0, 0);  /* Transparent initially */
-    color: white;
-    padding: 20px 0;
+    left: 5%;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 15px 0;
     text-align: center;
     z-index: 1000;
-    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth hiding of header */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  /* Adding a subtle shadow for luxury feel */
+    transition: background 0.3s ease-in-out;
+    border-bottom: 3px solid #ff4500;
 }
 
-/* Logo styling - Altrui */
-header .logo {
-    font-size: 80px;
-    font-weight: bold;
+/* Logo - Oversized, High-End Feel */
+.logo {
+    font-size: 72px;
+    font-weight: 600;
     text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;  /* Behind the text but still visible */
-    opacity: 1;  /* Fully visible at first */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, #ffffff, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.05);
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: #000;  /* Fully black */
-    position: sticky;
-    top: 0;
-    z-index: 1001;
-    border-bottom: 3px solid #959393;
-}
-
-nav .logo {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 15px 40px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ff4500;
-}
-
-/* Pop-down Navigation */
-.popdown-nav {
+/* Underline Hover Effect */
+nav ul li a::after {
+    content: '';
     position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    color: white;
-    width: 200px;
-    padding: 10px;
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-.popdown-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 12px;
-    transition: 0.3s;
-}
-
-.popdown-nav a:hover {
+    width: 100%;
+    height: 3px;
     background: #ff4500;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-.popdown-trigger {
-    background: black;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-    position: relative;
-}
-
-.popdown-trigger:hover {
-    background: #ff4500;
-}
-
-.popdown-container {
-    position: relative;
-    display: inline-block;
-}
-
-.popdown-container:hover .popdown-nav {
-    display: flex;
-    flex-direction: column;
+nav ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Hero Section */
 .hero {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    padding: 40px;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-    text-shadow: -2px -2px 0 #ff4500, 2px -2px 0 #ff4500, -2px 2px 0 #ff4500, 2px 2px 0 #ff4500;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 70px;
     font-weight: bold;
+    text-shadow: 4px 4px 0 #ff4500;
+    padding: 15px 30px;
+    border-radius: 10px;
     position: relative;
-    z-index: 1;
 }
 
-/* Button Styling */
+/* Buttons */
 .btn1 {
-    background: #000000;
+    background: #ff4500;
     color: #fff;
-    padding: 12px 24px;
+    padding: 15px 35px;
     text-decoration: none;
-    font-size: 20px;
-    transition: 0.3s;
-    border: 2px solid #ff4500;
-    position: relative;
-    z-index: 1;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid white;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .btn1:hover {
-    background: #ff4500;
-    transform: scale(1.05);
+    background: white;
+    color: #ff4500;
+    border-color: #ff4500;
+    transform: scale(1.1);
 }
 
 /* Main Content */
 main {
-    padding: 50px 20px;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
+    padding: 50px 0;
 }
 
 .content-box {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 12px;
     margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    max-width: 900px;
+    box-shadow: 0px 4px 20px rgba(255, 69, 0, 0.3);
 }
 
 /* Typography */
@@ -239,26 +165,28 @@ h2, h4, p {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    border-bottom: 2px solid #ff4500;
+    border-bottom: 4px solid #ff4500;
     display: inline-block;
     padding-bottom: 5px;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background-color: black;
     color: white;
     position: relative;
