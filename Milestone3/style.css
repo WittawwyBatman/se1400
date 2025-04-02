@@ -169,6 +169,7 @@ p {
     border-radius: 10px;
 }
 
+
 .product h4 {
     font-size: 22px;
     margin-top: 15px;
@@ -195,7 +196,6 @@ p {
 .product .btn1:hover {
     background-color: #d83d00;
 }
-
 
 /* Testimonials */
 .testimonials {
