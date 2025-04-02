@@ -141,7 +141,7 @@ p {
     display: flex;  /* Use flexbox for horizontal alignment */
     justify-content: space-between;  /* Space out the items evenly */
     gap: 0;  /* Add space between products */
-    flex-wrap: wrap;  /* Allow the products to wrap on smaller screens */
+    width: 100%;
 }
 
 .product {
