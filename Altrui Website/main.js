@@ -25,3 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // - Dynamic content loading
   });
   
+  // Newsletter Form Submission (Optional)
+const form = document.querySelector('.newsletter-form');
+const input = document.querySelector('.newsletter-input');
+
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = input.value;
+
+    // For now, just display an alert (you would hook up an API later)
+    alert(`Thank you for subscribing, ${email}!`);
+    input.value = ''; // Clear input after submission
+  });
+}
