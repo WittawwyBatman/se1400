@@ -70,7 +70,7 @@
     margin-bottom: 2rem;
   }
   
-  .cta-button {
+  .shop-button {
     display: inline-block;
     background-color: #000000;
     color: #ffffff;
@@ -81,7 +81,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .cta-button:hover {
+  .shop-button:hover {
     background-color: #333333;
   }
   
