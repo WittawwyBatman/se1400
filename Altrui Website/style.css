@@ -84,6 +84,11 @@
   .shop-button:hover {
     background-color: #333333;
   }
+
+  /* ========== Featured Products ======== */
+  .featured {
+    padding: 20px;
+  }
   
   /* ========== Footer ========== */
   .footer {
