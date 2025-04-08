@@ -96,8 +96,12 @@
   }
 
   .collection img {
-    height: 100%;
     width: 450px;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
   }
 
   .product1 {
