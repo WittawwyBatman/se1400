@@ -96,7 +96,7 @@
 
   .product1 {
     position: relative;
-    align-items: center;
+    text-align: center;
   }
   
   /* ========== Footer ========== */
