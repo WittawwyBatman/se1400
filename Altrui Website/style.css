@@ -86,6 +86,9 @@
   }
 
   /* ========== Featured Products ======== */
+  .featured {
+    background-color: black;
+  }
   .featured h2{
     text-align: center;
     margin-top: 15px;
