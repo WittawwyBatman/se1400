@@ -94,10 +94,12 @@
     color: #000000;
   }
 
+  .collection {
+    width: 100px;
+  }
+
   .product1 {
-    position: relative;
     text-align: left;
-    height: 200px;
   }
   
   /* ========== Footer ========== */
