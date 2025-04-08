@@ -41,6 +41,7 @@
     color: #000000;
     font-weight: 500;
     transition: color 0.3s ease;
+    text-align: right;
   }
   
   .nav a:hover {
