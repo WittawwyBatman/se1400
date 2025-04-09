@@ -260,6 +260,7 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 60px;
 }
 
 .fit-slider {
