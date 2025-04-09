@@ -40,34 +40,29 @@ if (form) {
   });
 }
 
-const fitButtons = document.querySelectorAll('.fit-button');
+const angles = ['front', 'side', 'back'];
+let currentAngle = 0;
+let currentFit = 'slightly-oversized';
+
 const fitImage = document.getElementById('fitImage');
-const leftBtn = document.querySelector('.angle-button.left');
-const rightBtn = document.querySelector('.angle-button.right');
 
-const imageAngles = ["front", "side", "back", "three-quarter"];
-let currentFit = "slightly-oversized";
-let currentAngleIndex = 0;
+function updateImage() {
+  const angle = angles[currentAngle];
+  fitImage.src = `images/${currentFit}/${angle}.png`;
+}
 
-const updateImage = () => {
-  const angle = imageAngles[currentAngleIndex];
-  fitImage.src = `/public/images/${currentFit}/${angle}.png`;
-};
-
-fitButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    currentFit = button.getAttribute('data-fit');
-    currentAngleIndex = 0;
-    updateImage();
-  });
-});
-
-leftBtn.addEventListener('click', () => {
-  currentAngleIndex = (currentAngleIndex - 1 + imageAngles.length) % imageAngles.length;
+function setFit(fitName) {
+  currentFit = fitName;
+  currentAngle = 0;
   updateImage();
-});
+}
 
-rightBtn.addEventListener('click', () => {
-  currentAngleIndex = (currentAngleIndex + 1) % imageAngles.length;
+function prevAngle() {
+  currentAngle = (currentAngle - 1 + angles.length) % angles.length;
   updateImage();
-});
+}
+
+function nextAngle() {
+  currentAngle = (currentAngle + 1) % angles.length;
+  updateImage();
+}

@@ -80,22 +80,22 @@
   </div>
 </section>
 
-<!-- Interactive Fit Guide -->
 <section class="fit-guide">
-  <h2 class="fit-title">Find Your Fit</h2>
+  <h2>Find Your Fit</h2>
 
-  <div class="fit-options">
-    <button class="fit-button" data-fit="slightly-oversized">Slightly Oversized</button>
-    <button class="fit-button" data-fit="heavyweight">Heavyweight</button>
-    <button class="fit-button" data-fit="boxy-cut">Boxy Cut</button>
+  <div class="fit-buttons">
+    <button onclick="setFit('slightly-oversized')">Slightly Oversized</button>
+    <button onclick="setFit('heavyweight')">Heavyweight</button>
+    <button onclick="setFit('boxy-cut')">Boxy Cut</button>
   </div>
 
-  <div class="fit-image-container">
-    <button class="angle-button left">&larr;</button>
-    <img id="fitImage" src="public/Images/heavyweight/front.png" alt="Fit Preview">
-    <button class="angle-button right">&rarr;</button>
+  <div class="fit-slider">
+    <button onclick="prevAngle()">←</button>
+    <img id="fitImage" src="images/slightly-oversized/front.png" alt="Fit View" />
+    <button onclick="nextAngle()">→</button>
   </div>
 </section>
+
   
   <!-- Footer -->
   <footer class="footer">
