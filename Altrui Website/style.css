@@ -46,6 +46,18 @@
   .nav a:hover {
     color: #555555;
   }
+
+  .nav h1 {
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav h1:hover {
+    color: #555555;
+  }
   
   /* ========== Hero Section ========== */
   .hero {
