@@ -39,3 +39,20 @@ if (form) {
     input.value = ''; // Clear input after submission
   });
 }
+
+// Fit Guide Image Switcher
+const fitButtons = document.querySelectorAll('.fit-button');
+const fitImage = document.getElementById('fitImage');
+
+const fitImageMap = {
+  "slightly-oversized": "/public/images/fit-slightly-oversized.png",
+  "heavyweight": "/public/images/fit-heavyweight.png",
+  "boxy-cut": "/public/images/fit-boxy-cut.png"
+};
+
+fitButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedFit = button.getAttribute('data-fit');
+    fitImage.src = fitImageMap[selectedFit];
+  });
+});
