@@ -45,9 +45,9 @@ const fitButtons = document.querySelectorAll('.fit-button');
 const fitImage = document.getElementById('fitImage');
 
 const fitImageMap = {
-  "slightly-oversized": "/public/images/fit-slightly-oversized.png",
-  "heavyweight": "/public/images/fit-heavyweight.png",
-  "boxy-cut": "/public/images/fit-boxy-cut.png"
+  "slightly-oversized": "images/HeavyFitFront.png",
+  "heavyweight": "images/HeavyFitFront.png",
+  "boxy-cut": "images/HeavyFitFront.png"
 };
 
 fitButtons.forEach(button => {
