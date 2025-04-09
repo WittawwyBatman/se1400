@@ -318,6 +318,29 @@
   margin-bottom: 2rem;
 }
 
+.bms-description {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.bmsdes-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.bmsdes-subtitle {
+  font-size: 1.25rem;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
 .bms-container h2,
 .bms-container h3 {
   color: #000000;
