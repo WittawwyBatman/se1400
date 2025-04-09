@@ -278,12 +278,40 @@
   background-color: #333;
 }
 
+.fit-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fit-image-container img {
   max-width: 400px;
   width: 100%;
   border-radius: 12px;
   transition: opacity 0.3s ease;
 }
+
+.angle-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
+}
+
+.angle-button.left {
+  left: 0.5rem;
+}
+
+.angle-button.right {
+  right: 0.5rem;
+}
+
 
   /* ========== Footer ========== */
   .footer {
