@@ -167,13 +167,13 @@
   
   .newsletter-footer-text {
     font-size: 0.875rem;
-    color: #777;
+    color: #252525;
     margin-top: 1rem;
   }
   
   /* ========== Altrui Ethos Section ========== */
 .altrui-ethos {
-  background-color: #000;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -197,8 +197,8 @@
 /* ========== Altrui In Motion ========== */
 .altrui-motion {
   padding: 4rem 1rem;
-  background-color: #111;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   overflow-x: hidden;
 }
 
