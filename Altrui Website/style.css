@@ -258,7 +258,6 @@
   color: #fff;
   border-radius: 50px;
   border: none;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   width: 200px;
 }
