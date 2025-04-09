@@ -304,11 +304,11 @@
   border-radius: 6px;
 }
 
-.angle-button.left {
+.angle-button-left {
   left: 0.5rem;
 }
 
-.angle-button.right {
+.angle-button-right {
   right: 0.5rem;
 }
 
