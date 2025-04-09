@@ -248,13 +248,6 @@
 
 .fit-buttons {
   margin-bottom: 1rem;
-  font-weight: bold;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .fit-buttons button {
