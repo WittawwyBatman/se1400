@@ -51,7 +51,7 @@ let currentAngleIndex = 0;
 
 const updateImage = () => {
   const angle = imageAngles[currentAngleIndex];
-  fitImage.src = `/public/images/${currentFit}/${angle}.png`;
+  fitImage.src = `/Altrui Website/images/${currentFit}/${angle}.png`;
 };
 
 fitButtons.forEach(button => {
