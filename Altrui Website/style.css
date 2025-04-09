@@ -194,6 +194,53 @@
   text-transform: uppercase;
 }
 
+/* ========== Altrui In Motion ========== */
+.altrui-motion {
+  padding: 4rem 1rem;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.motion-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.motion-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.motion-strip::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.motion-track {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.motion-track img {
+  height: 350px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.motion-track img:hover {
+  transform: scale(1.05);
+}
+
   /* ========== Footer ========== */
   .footer {
     width: 100%;
