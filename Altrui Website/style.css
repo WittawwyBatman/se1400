@@ -289,102 +289,137 @@
   transition: background-color 0.3s ease;
 }
 
+
+/* === CONTAINER === */
 .bms-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.bms-intro {
+/* === SHARED SECTION STYLES === */
+.bms-section {
   min-height: 60vh;
+  padding: 4rem 1.5rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #f9f9f9;
 }
 
+.bms-section .container {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+/* === TYPOGRAPHY === */
 .bmsintro-title {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   align-items: center;
+  color: #ffffff;
 }
-
-.bmsintro-subtitle {
-  font-size: 1.25rem;
-  color: #555555;
-  margin-bottom: 2rem;
-}
-
-.bms-description {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #f9f9f9;
-}
-
 .bmsdes-title {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   align-items: center;
+  color: #ffffff;
 }
-
-.bmsdes-subtitle {
-  font-size: 1.25rem;
-  color: #555555;
-  margin-bottom: 2rem;
-}
-
-.bms-how-to-join {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #f9f9f9;
-}
-
-.join-title {
+.join-title { 
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   align-items: center;
+  color: #ffffff;
 }
-
-.join-subtitle {
-  font-size: 1.25rem;
-  color: #555555;
-  margin-bottom: 2rem;
-}
-
-.bms-contact {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #f9f9f9;
-}
-
 .bmscontact-title {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 1rem;
-  align-items: center;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
 }
 
+.bmsintro-subtitle{ 
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.bmsdes-subtitle{ 
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.join-subtitle{ 
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
 .bmscontact-subtitle {
   font-size: 1.25rem;
   color: #555555;
   margin-bottom: 2rem;
+}
+
+/* === LIST STYLES === */
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 700px;
+  margin: 1rem auto;
+  color: #ffffff;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* === SECTION-SPECIFIC COLORS (optional, for better separation) === */
+.bms-intro .container {
+  background-color: rgb(0, 0, 0);
+}
+
+.bms-description .container {
+  background-color: rgb(0, 0, 0);
+}
+
+.bms-how-to-join .container {
+  background-color: rgb(0, 0, 0);
+}
+
+.bms-contact .container {
+  background-color: rgb(0, 0, 0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .bms-title,
+  .bmsintro-title,
+  .bmsdes-title,
+  .join-title,
+  .bmscontact-title {
+    font-size: 2rem;
+  }
+
+  .bms-subtitle,
+  .bmsintro-subtitle,
+  .bmsdes-subtitle,
+  .join-subtitle,
+  .bmscontact-subtitle {
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .bms-section .container {
+    padding: 2rem;
+  }
 }
 
   /* ========== Footer ========== */
