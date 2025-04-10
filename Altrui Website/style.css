@@ -219,61 +219,79 @@
     text-align: left;
   }
   
- /* ========== Newsletter Signup ========== */
+/* ========== Newsletter Signup ========== */
 .newsletter-signup {
-    background-color: #f9f9f9;
-    padding: 4rem 0;
-    border-top: 1px solid #e5e5e5;
-  }
-  
-  .newsletter-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .newsletter-subtitle {
-    font-size: 1.125rem;
-    color: #555555;
-    margin-bottom: 2rem;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .newsletter-input {
-    width: 100%;
-    padding: 0.75rem 1.25rem;
-    border-radius: 50px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-  }
-  
-  .newsletter-button {
-    background-color: #000;
-    color: #fff;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .newsletter-button:hover {
-    background-color: #333;
-  }
-  
-  .newsletter-footer-text {
-    font-size: 0.875rem;
-    color: #252525;
-    margin-top: 1rem;
-  }
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.newsletter-subtitle {
+  font-size: 1.125rem;
+  color: #555555;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-input {
+  flex: 1 1 300px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.newsletter-input:focus {
+  box-shadow: 0 0 0 2px #00000010;
+}
+
+.newsletter-button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #222;
+}
+
+.newsletter-footer-text {
+  font-size: 0.875rem;
+  color: #444;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   
   /* ========== Altrui Ethos Section ========== */
 .altrui-ethos {
@@ -286,7 +304,10 @@
 
 .ethos-content {
   max-width: 900px;
-  margin: 0 auto;
+  height: 700px;
+  margin: auto;
+  text-align: center;
+  padding-top: 200px;
 }
 
 .ethos-line {
