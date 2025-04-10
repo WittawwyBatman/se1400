@@ -80,30 +80,39 @@
   /* ========== Hero Section ========== */
   .hero {
     min-height: 60vh;
+    height: 675px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 4rem 1rem;
     background-color: #f9f9f9;
+  
+    background-image: url('images/BlackMask1.png'); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
   }
   
   .hero-title {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
+    color: #ffffff;
   }
   
   .hero-subtitle {
     font-size: 1.25rem;
-    color: #555555;
+    color: #ffffff;
     margin-bottom: 2rem;
   }
   
   .shop-button {
     display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 0.75rem 2rem;
     border-radius: 50px;
     text-decoration: none;
