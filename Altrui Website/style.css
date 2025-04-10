@@ -569,7 +569,7 @@ ul li {
   justify-content: center;
   text-align: center;
   padding-right: 125px;
-  
+
 }
 
 .product-card {
@@ -579,7 +579,6 @@ ul li {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
   width: 400px;
-  justify-content: center;
 }
 
 .product-card img {
