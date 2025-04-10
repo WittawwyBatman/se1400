@@ -66,3 +66,20 @@ function nextAngle() {
   currentAngle = (currentAngle + 1) % angles.length;
   updateImage();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggle = document.getElementById("dropdownToggle");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  dropdownToggle.addEventListener("click", function (e) {
+    e.stopPropagation(); // Prevents closing immediately
+    dropdownMenu.style.display =
+      dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!dropdownMenu.contains(e.target) && e.target !== dropdownToggle) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+});
