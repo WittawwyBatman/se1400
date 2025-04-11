@@ -10,6 +10,7 @@
     background-color: #ffffff;
     color: #000000;
     line-height: 1.6;
+    cursor: url('images/Cursor.cur') 16 16, auto;
   }
   
   /* ========== Layout Containers ========== */
@@ -475,9 +476,10 @@ main.bms-page::before {
   color: #ffffff;
   font-weight: bold;
   background: linear-gradient(to right, #999 0%, #fff 50%, #999 100%);
-  -webkit-background-clip: text;
+  background-clip: text;             /* Standard */
+  -webkit-background-clip: text;     /* Safari/Chrome */
   -webkit-text-fill-color: transparent;
-  letter-spacing: 1.2px;
+  text-fill-color: transparent;      /* Optional: future standard */
 }
 
 /* === FADED BORDER UNDERLINES === */
