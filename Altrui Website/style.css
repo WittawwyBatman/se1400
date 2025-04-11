@@ -12,6 +12,15 @@
     line-height: 1.6;
     cursor: url('images/Cursor.cur') 16 16, auto;
   }
+
+  a,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  label,
+  .shop-card:hover {
+    cursor: url('images/finger-select.ani') 16 16, pointer;
+  }
   
   /* ========== Layout Containers ========== */
   .container {
@@ -82,7 +91,6 @@
 
   .logo-dropdown {
     position: relative;
-    cursor: pointer;
   }
 
   .dropdown-menu {
@@ -129,7 +137,7 @@
   color: #fff;
   border: none;
   padding: 0 0.75rem;
-  cursor: pointer;
+  cursor: url('images/finger-select.ani') 16 16, auto;
 }
 
 .icon {
