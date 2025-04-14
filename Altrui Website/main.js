@@ -83,3 +83,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("promoPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Show popup after delay (optional)
+  setTimeout(() => {
+    if (popup) {
+      popup.style.display = "flex";
+    }
+  }, 1000); // 1 second delay
+
+  // Close button logic
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
+
+  // Optional: Close when clicking outside the content
+  if (popup) {
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  }
+});
+
