@@ -498,7 +498,7 @@ main.bms-page::before {
   background-clip: text;             /* Standard */
   -webkit-background-clip: text;     /* Safari/Chrome */
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;      /* Optional: future standard */
+  /* Removed 'text-fill-color' as it is not a standard property */
 }
 
 /* === FADED BORDER UNDERLINES === */
