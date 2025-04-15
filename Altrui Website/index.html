@@ -6,6 +6,7 @@
   <meta name="description" content="Altrui - Skatewear and baggy street fashion for the bold." />
   <title>Altrui | Skatewear & Street Style</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -119,10 +120,20 @@
   </div>
 
   <div class="fit-slider">
-    <button onclick="prevAngle()">←</button>
+    <button class="slider-btn" onclick="prevAngle()">
+      <i data-lucide="chevron-left"></i>
+    </button>
+    <script>
+      lucide.createIcons(); // initialize icons after page loads
+    </script>
+  
     <img id="fitImage" src="images/slightly-oversized/front.png" alt="Fit View" />
-    <button onclick="nextAngle()">→</button>
-  </div>
+    <button class="slider-btn" onclick="nextAngle()">
+      <i data-lucide="chevron-right"></i>
+    </button>
+    <script>
+      lucide.createIcons(); // initialize icons after page loads
+    </script>
 </section>
 
 <!-- Promo Popup Modal -->
