@@ -40,32 +40,48 @@ if (form) {
   });
 }
 
-const angles = ['front', 'side', 'back'];
-let currentAngle = 0;
 let currentFit = 'slightly-oversized';
+let currentAngleIndex = 0;
+const angles = ['front', 'side', 'back'];
 
 const fitImage = document.getElementById('fitImage');
+const fitButtons = document.querySelectorAll('.fit-button');
 
 function updateImage() {
-  const angle = angles[currentAngle];
-  fitImage.src = `images/${currentFit}/${angle}.png`;
+  const angle = angles[currentAngleIndex];
+  fitImage.style.opacity = 0;
+  setTimeout(() => {
+    fitImage.src = `images/${currentFit}/${angle}.png`;
+    fitImage.alt = `${currentFit} - ${angle}`;
+    fitImage.style.opacity = 1;
+  }, 150);
 }
 
-function setFit(fitName) {
-  currentFit = fitName;
-  currentAngle = 0;
+function setFit(fit) {
+  currentFit = fit;
+  currentAngleIndex = 0;
   updateImage();
 }
 
 function prevAngle() {
-  currentAngle = (currentAngle - 1 + angles.length) % angles.length;
+  currentAngleIndex = (currentAngleIndex - 1 + angles.length) % angles.length;
   updateImage();
 }
 
 function nextAngle() {
-  currentAngle = (currentAngle + 1) % angles.length;
+  currentAngleIndex = (currentAngleIndex + 1) % angles.length;
   updateImage();
 }
+
+// Button interaction
+fitButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    fitButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    setFit(button.dataset.fit);
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownToggle = document.getElementById("dropdownToggle");

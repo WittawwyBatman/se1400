@@ -404,8 +404,13 @@
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   width: 200px;
+}
+
+.fit-buttons button.active {
+  background-color: #444;
+  transform: scale(1.05);
 }
 
 .fit-slider {
@@ -420,6 +425,7 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: opacity 0.3s ease;
 }
 
 .fit-slider button {
@@ -433,7 +439,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 
 
 /* === BMS PAGE === */
