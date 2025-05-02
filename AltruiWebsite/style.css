@@ -19,7 +19,7 @@
   input[type="submit"],
   label,
   .shop-card:hover {
-    cursor: url('images/finger-select.ani') 16 16, pointer;
+    cursor: url('images/finge-select.ani') 16 16, pointer;
   }
   
   /* ========== Layout Containers ========== */
