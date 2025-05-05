@@ -10,16 +10,6 @@
     background-color: #ffffff;
     color: #000000;
     line-height: 1.6;
-    cursor: url('images/Cursor.cur') 16 16, auto;
-  }
-
-  a,
-  button,
-  input[type="button"],
-  input[type="submit"],
-  label,
-  .shop-card:hover {
-    cursor: url('images/finge-select.ani') 16 16, pointer;
   }
   
   /* ========== Layout Containers ========== */
